@@ -7,18 +7,22 @@ import { RegistrationComponent } from './auth/registration/registration.componen
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './auth/login/login.component';
 import { AddInventoryComponent } from './features/add-inventory/add-inventory.component';
+import { UpdateDeleteInventoryComponent } from './features/update-delete-inventory/update-delete-inventory.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
     LoginComponent,
-    AddInventoryComponent
+    AddInventoryComponent,
+    UpdateDeleteInventoryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    MatTableModule
   ],
   providers: [
     provideClientHydration()
