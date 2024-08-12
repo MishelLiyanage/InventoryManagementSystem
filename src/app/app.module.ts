@@ -10,6 +10,7 @@ import { AddInventoryComponent } from './features/add-inventory/add-inventory.co
 import { UpdateDeleteInventoryComponent } from './features/update-delete-inventory/update-delete-inventory.component';
 import { MatTableModule } from '@angular/material/table';
 import { UpdateFormComponent } from './features/update-form/update-form.component';
+import { ViewInventoryComponent } from './features/view-inventory/view-inventory.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { UpdateFormComponent } from './features/update-form/update-form.componen
     LoginComponent,
     AddInventoryComponent,
     UpdateDeleteInventoryComponent,
-    UpdateFormComponent
+    UpdateFormComponent,
+    ViewInventoryComponent
   ],
   imports: [
     BrowserModule,
