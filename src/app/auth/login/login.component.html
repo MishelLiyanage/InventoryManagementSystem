@@ -1,0 +1,39 @@
+<div class="registration-container"></div>
+<div class="form-container" appearance="outlined">
+  <div class="topic-signup">
+    <h1>Welcome</h1>
+    <h3>Log in to your account</h3>
+  </div>
+
+  <!-- {{ userForm.value | json }} -->
+  <hr />
+  <!-- {{ userModel | json }} -->
+  <form #userForm="ngForm">
+    <div class="form-group">
+      <label for="">Username: </label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="userModel.username"
+        name="username"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="">Password: </label>
+      <input
+        type="password"
+        class="form-control"
+        [(ngModel)]="userModel.password"
+        name="password"
+      />
+    </div>
+
+    <button class="btn" type="submit">Log In</button>
+
+    <div class="signup">
+      <label>Don't have an account? </label>
+      <button class="btn-signup">Sign Up</button>
+    </div>
+  </form>
+</div>
