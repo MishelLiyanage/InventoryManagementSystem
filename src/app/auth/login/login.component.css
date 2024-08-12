@@ -10,11 +10,11 @@
 
 .form-container {
     background-color: #efe8e4;
-    padding: 25px;
+    padding: 40px;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     width: 25%;
-    margin-top: 0px;
+    margin-top: 50px;
     /* margin-left: 600px; */
     position: absolute;
     top: 50%;
@@ -30,12 +30,10 @@
     color: hsl(4, 69%, 18%);
     font-weight: bold;
     font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
-.topic-signup h4{
+.topic-signup h3{
     color: hsl(4, 69%, 18%);
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .form-group {
@@ -49,7 +47,6 @@
     color: #4c331a;
     font-weight: bold;
     font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .form-control {
