@@ -12,27 +12,30 @@ import { MatTableModule } from '@angular/material/table';
 import { UpdateFormComponent } from './features/update-form/update-form.component';
 import { ViewInventoryComponent } from './features/view-inventory/view-inventory.component';
 import { SearchFilterInventoryComponent } from './features/search-filter-inventory/search-filter-inventory.component';
+import { ReportsComponent } from './reports/reports.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
     RegistrationComponent,
     LoginComponent,
     AddInventoryComponent,
     UpdateDeleteInventoryComponent,
     UpdateFormComponent,
     ViewInventoryComponent,
-    SearchFilterInventoryComponent
+    SearchFilterInventoryComponent,
+    
   ],
   imports: [
+    AppComponent,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    MatTableModule
+    MatTableModule,
+    ReportsComponent
   ],
   providers: [
     provideClientHydration()
   ],
-  bootstrap: [AppComponent]
+  
 })
 export class AppModule { }
