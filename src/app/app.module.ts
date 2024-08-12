@@ -9,6 +9,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { AddInventoryComponent } from './features/add-inventory/add-inventory.component';
 import { UpdateDeleteInventoryComponent } from './features/update-delete-inventory/update-delete-inventory.component';
 import { MatTableModule } from '@angular/material/table';
+import { UpdateFormComponent } from './features/update-form/update-form.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MatTableModule } from '@angular/material/table';
     RegistrationComponent,
     LoginComponent,
     AddInventoryComponent,
-    UpdateDeleteInventoryComponent
+    UpdateDeleteInventoryComponent,
+    UpdateFormComponent
   ],
   imports: [
     BrowserModule,

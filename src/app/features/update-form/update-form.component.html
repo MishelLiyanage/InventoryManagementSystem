@@ -1,0 +1,57 @@
+<h1>UPDATE ITEM IN THE INVENTORY</h1>
+
+<div class="container-fluid">
+    <form #userForm="ngForm">
+  
+      <div class="mb-3">
+        <label >Category</label>
+  
+        <div class="form-check">
+          <input type="radio" class="from-check-input" name="Category" value="Cake Ingredients" ngModel>
+          <label class="form-check-label">Cake Ingredients</label>
+        </div>
+  
+        <div class="form-check">
+          <input type="radio" class="from-check-input" name="Category" value="Cake Tools" ngModel>
+          <label class="form-check-label">Cake Tools</label>
+        </div>
+  
+        <div class="form-check">
+          <input type="radio" class="from-check-input" name="Category" value="Party Items" ngModel>
+          <label class="form-check-label">Party Items</label>
+        </div>
+      </div>
+      <pre></pre>
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" name="ItemName" ngModel>
+      </div>
+  
+      <pre></pre>
+      <div class="form-group">
+        <label>Quantity</label>
+        <input type="number" name="Quantity" class="form-control" ngModel>
+      </div>
+  
+      <pre></pre>
+      <div class="form-group">
+        <label>Purchase Date</label>
+        <input type="date" name="PurchaseDate" class="form-control" ngModel>
+      </div>
+  
+      <pre></pre>
+      <div class="form-group">
+        <label>Manufacturer</label>
+        <input type="text" name="Manufacturer" class="form-control" ngModel>
+      </div>
+      <pre></pre>
+      
+      <button class="btn btn-primary">Update Item</button>
+    </form>
+
+ 
+  </div>
+
+
+  
+
