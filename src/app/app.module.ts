@@ -11,6 +11,7 @@ import { UpdateDeleteInventoryComponent } from './features/update-delete-invento
 import { MatTableModule } from '@angular/material/table';
 import { UpdateFormComponent } from './features/update-form/update-form.component';
 import { ViewInventoryComponent } from './features/view-inventory/view-inventory.component';
+import { SearchFilterInventoryComponent } from './features/search-filter-inventory/search-filter-inventory.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ViewInventoryComponent } from './features/view-inventory/view-inventory
     AddInventoryComponent,
     UpdateDeleteInventoryComponent,
     UpdateFormComponent,
-    ViewInventoryComponent
+    ViewInventoryComponent,
+    SearchFilterInventoryComponent
   ],
   imports: [
     BrowserModule,
