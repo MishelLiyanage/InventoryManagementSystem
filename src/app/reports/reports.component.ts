@@ -3,7 +3,6 @@ import Chart from 'chart.js/auto';
 
 @Component({
   selector: 'app-reports',
-  standalone: true,
   templateUrl: './reports.component.html',
   styleUrls: ['./reports.component.css']
 })
