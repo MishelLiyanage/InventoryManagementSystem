@@ -17,9 +17,9 @@ import { ReportsComponent } from './reports/reports.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
-
 @NgModule({
   declarations: [
+    AppComponent,
     RegistrationComponent,
     LoginComponent,
     AddInventoryComponent,
@@ -27,18 +27,15 @@ import { FooterComponent } from './components/footer/footer.component';
     UpdateFormComponent,
     ViewInventoryComponent,
     SearchFilterInventoryComponent,
-    reports,
     HeaderComponent,
-    FooterComponent
-
+    FooterComponent,
+    ReportsComponent
   ],
   imports: [
-    AppComponent,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     MatTableModule,
-    ReportsComponent
   ],
   providers: [
     provideAnimationsAsync()
