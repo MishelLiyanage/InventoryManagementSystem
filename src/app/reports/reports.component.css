@@ -1,0 +1,193 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+
+  .container {
+    margin-top: 30px;
+  }
+
+  .report-card {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+
+  .report-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .report-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .report-actions {
+    display: flex;
+    align-items: center;
+  }
+
+  .btn-print {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .btn-print:hover {
+    opacity: 0.8;
+  }
+
+  .report-content {
+    margin-bottom: 20px;
+  }
+
+  .weekly-sales {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .sales-cell {
+    background-color: #e0f2f7;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .sales-cell.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .top-suppliers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .supplier-chart {
+    width: 150px;
+    height: 150px;
+  }
+
+  .supplier-data {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .supplier-name {
+    font-weight: bold;
+  }
+
+  .supplier-percentage {
+    font-size: 12px;
+    color: #888;
+  }
+
+  .supplier-performance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .performance-chart {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .performance-bar {
+    height: 30px;
+    border-radius: 5px;
+  }
+
+  .performance-label {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  .performance-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .performance-value {
+    font-weight: bold;
+  }
+
+  .performance-legend {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+  }
+
+  .legend-color {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+
+  .report-section {
+    margin-bottom: 20px;
+  }
+
+  .report-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .report-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .btn-download {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .btn-download:hover {
+    opacity: 0.8;
+  }
+
+  .btn-view {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .btn-view:hover {
+    opacity: 0.8;
+  }
