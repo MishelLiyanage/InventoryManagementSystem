@@ -14,6 +14,7 @@ import { UpdateFormComponent } from './features/update-form/update-form.componen
 import { ViewInventoryComponent } from './features/view-inventory/view-inventory.component';
 import { SearchFilterInventoryComponent } from './features/search-filter-inventory/search-filter-inventory.component';
 import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HeaderComponent } from './components/header/header.component';
     UpdateFormComponent,
     ViewInventoryComponent,
     SearchFilterInventoryComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
