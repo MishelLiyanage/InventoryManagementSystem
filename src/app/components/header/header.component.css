@@ -1,0 +1,42 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #5b1c0c;
+    color: #efe8e4; /* White text */
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 40px; /* Adjust as necessary */
+    margin-right: 10px;
+  }
+  
+  .center-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .center-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .user-profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-profile span {
+    margin-right: 10px;
+  }
+  
+  .user-profile img {
+    height: 40px; /* Adjust as necessary */
+    border-radius: 50%;
+  }

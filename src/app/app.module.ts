@@ -12,6 +12,7 @@ import { MatTableModule } from '@angular/material/table';
 import { UpdateFormComponent } from './features/update-form/update-form.component';
 import { ViewInventoryComponent } from './features/view-inventory/view-inventory.component';
 import { SearchFilterInventoryComponent } from './features/search-filter-inventory/search-filter-inventory.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SearchFilterInventoryComponent } from './features/search-filter-invento
     UpdateDeleteInventoryComponent,
     UpdateFormComponent,
     ViewInventoryComponent,
-    SearchFilterInventoryComponent
+    SearchFilterInventoryComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
