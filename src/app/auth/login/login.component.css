@@ -30,10 +30,12 @@
     color: hsl(4, 69%, 18%);
     font-weight: bold;
     font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .topic-signup h3{
     color: hsl(4, 69%, 18%);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .form-group {
@@ -47,6 +49,7 @@
     color: #4c331a;
     font-weight: bold;
     font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .form-control {
@@ -80,6 +83,8 @@
 .signup{
     text-align: center;
     padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .btn-signup{
@@ -91,4 +96,5 @@
     border-radius: 5px;
     /* display: block; */
     padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
 }

@@ -7,5 +7,5 @@ import { User } from '../../models/user';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  userModel = new User('Mishel', 'Fernando', 'mishel@gmail.com', 'mish123', '123456');
+  userModel = new User('', '', '', '', '', '', '');
 }
