@@ -25,30 +25,35 @@
 
 }
 
+.topic-signup{
+    margin: 0;
+}
+
 .topic-signup h1 {
     margin-bottom: 10px;
     color: hsl(4, 69%, 18%);
     font-weight: bold;
-    font-size: 30px;
+    font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .topic-signup h4{
     color: hsl(4, 69%, 18%);
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
 }
 
 .form-group label {
     margin-bottom: 10px;
     color: #4c331a;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -57,9 +62,9 @@
     border-radius: 10px;
     padding: 10px;
     color: #4c331a;
-    font-size: 18px;
+    font-size: 15px;
     width: 100%;
-    height: 40px;
+    height: 30px;
     box-sizing: border-box;
 }
 
@@ -73,7 +78,7 @@
     display: block;
     width: 100%;
     height: 40px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .btn:hover {
@@ -82,7 +87,7 @@
 
 .signup{
     text-align: center;
-    padding: 10px;
+    padding-top: 10px;
 }
 
 .btn-signup{

@@ -14,6 +14,7 @@
       <input
         type="text"
         class="form-control"
+        placeholder="Ex:- Mishel"
         [(ngModel)]="userModel.firstname"
         name="firstname"
       />
@@ -24,6 +25,7 @@
         <input
           type="text"
           class="form-control"
+          placeholder="Ex:- Fernando"
           [(ngModel)]="userModel.lastname"
           name="lastname"
         />
@@ -34,6 +36,7 @@
         <input
           type="text"
           class="form-control"
+          placeholder="Ex:- mishel@gmail.com"
           [(ngModel)]="userModel.email"
           name="email"
         />
@@ -44,6 +47,7 @@
         <input
           type="text"
           class="form-control"
+          placeholder="Ex:- Mish123"
           [(ngModel)]="userModel.username"
           name="username"
         />
@@ -54,8 +58,31 @@
       <input
         type="password"
         class="form-control"
+        placeholder="Ex:- 123456"
         [(ngModel)]="userModel.password"
         name="password"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="">City: </label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Ex:- Negombo"
+        [(ngModel)]="userModel.city"
+        name="city"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="">Contact No: </label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Ex:- 0712345678"
+        [(ngModel)]="userModel.telno"
+        name="telno"
       />
     </div>
 
