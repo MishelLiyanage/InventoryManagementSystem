@@ -16,6 +16,7 @@ import { SearchFilterInventoryComponent } from './features/search-filter-invento
 import { ReportsComponent } from './reports/reports.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { NavbarAdminComponent } from './components/navbar-admin/navbar-admin.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { FooterComponent } from './components/footer/footer.component';
     SearchFilterInventoryComponent,
     HeaderComponent,
     FooterComponent,
-    ReportsComponent
+    ReportsComponent,
+    NavbarAdminComponent
   ],
   imports: [
     BrowserModule,
