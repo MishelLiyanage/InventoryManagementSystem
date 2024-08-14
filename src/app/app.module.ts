@@ -15,6 +15,7 @@ import { ReportsComponent } from './reports/reports.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarAdminComponent } from './components/navbar-admin/navbar-admin.component';
+import { NavbarCustomerComponent } from './components/navbar-customer/navbar-customer.component';
 import { OrderInventoryComponent } from './features/order-inventory/order-inventory.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -37,6 +38,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FooterComponent,
     ReportsComponent,
     NavbarAdminComponent,
+    NavbarCustomerComponent,
     OrderInventoryComponent
   ],
   imports: [
