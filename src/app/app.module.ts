@@ -17,6 +17,7 @@ import { ReportsComponent } from './reports/reports.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarAdminComponent } from './components/navbar-admin/navbar-admin.component';
+import { NavbarCustomerComponent } from './components/navbar-customer/navbar-customer.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { NavbarAdminComponent } from './components/navbar-admin/navbar-admin.com
     HeaderComponent,
     FooterComponent,
     ReportsComponent,
-    NavbarAdminComponent
+    NavbarAdminComponent,
+    NavbarCustomerComponent
   ],
   imports: [
     BrowserModule,

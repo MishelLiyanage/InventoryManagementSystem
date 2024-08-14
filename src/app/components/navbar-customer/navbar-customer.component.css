@@ -5,6 +5,7 @@
     /* Match the background color */
     padding: 20px;
     font-family: Arial, sans-serif;
+
 }
 
 .section {
@@ -25,8 +26,8 @@
 
 .section ul li {
     /* margin-bottom: 10px; */
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 15px;
 }
 
