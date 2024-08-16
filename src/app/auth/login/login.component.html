@@ -8,13 +8,13 @@
   <!-- {{ userForm.value | json }} -->
   <hr />
   <!-- {{ userModel | json }} -->
-  <form #userForm="ngForm">
+  <form (ngSubmit)="login()">
     <div class="form-group">
       <label for="">Username: </label>
       <input
         type="text"
         class="form-control"
-        [(ngModel)]="userModel.username"
+        [(ngModel)]="username"
         name="username"
       />
     </div>
@@ -24,7 +24,7 @@
       <input
         type="password"
         class="form-control"
-        [(ngModel)]="userModel.password"
+        [(ngModel)]="password"
         name="password"
       />
     </div>
