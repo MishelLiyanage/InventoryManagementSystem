@@ -25,6 +25,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ViewOrdersComponent } from './features/view-orders/view-orders.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AdminDashboardComponent } from './dashboards/admin-dashboard/admin-dashboard.component';
+import { CustomerDashboardComponent } from './dashboards/customer-dashboard/customer-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarAdminComponent,
     NavbarCustomerComponent,
     OrderInventoryComponent,
-    ViewOrdersComponent
+    ViewOrdersComponent,
+    AdminDashboardComponent,
+    CustomerDashboardComponent
   ],
   imports: [
     BrowserModule,
