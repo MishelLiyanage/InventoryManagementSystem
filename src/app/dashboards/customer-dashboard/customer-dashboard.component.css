@@ -1,0 +1,32 @@
+.dashboard-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.dashboard-header{
+    margin-left: 75px;
+    margin-top: 225px;
+    margin-bottom: 225px;
+    margin-right: 0%;
+}
+
+.dashboard-header h1{
+    color: #210806;
+    font-size: 55px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.dashboard-header p{
+    margin-top: 35px;
+    color: hsl(4, 69%, 8%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.welcomeImage{
+    margin-right: 80px;
+    margin-left: 0%;
+    height: 500px;
+    width: auto;
+    float: right;
+}
