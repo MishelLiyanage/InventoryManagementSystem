@@ -1,98 +1,80 @@
-
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #fff8dc; 
-  }
-  
-  h1 {
-    padding: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 200;
-    text-align: center; 
-    color:  hsl(4, 69%, 18%);; 
-    font-size: 50px; 
-    margin-bottom: 20px;
-  }
-  
-  
-  .demo-button-container {
-    padding: 12px;
-    text-align: left; 
-    margin-bottom: 10px; 
-  }
-  
-  
-  button {
-    background-color:  hsl(4, 69%, 18%);
-    color: white; 
-    border: none; 
-    padding: 10px 20px; 
-    font-size: 20px; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
-    transition: background-color 0.3s ease, transform 0.3s ease; 
-    margin-right: 10px; 
-  }
-  
-  button:hover {
-    background-color: #a0522d; 
-    transform: translateY(-2px); 
-  }
-  
-  button:active {
-    background-color: #5c4033; 
-    transform: translateY(0); 
-  }
-  
-  .table1 {
-    padding: 5px 40px 50px;
-  }
-  
-  table {
-    border-radius: 5px; 
-    width: 70%;
-    max-width: 50px;
-    margin: 0 auto; 
-    border-collapse: collapse;
-    background-color: #f5f5dc; 
-    border: 1px solid  hsl(4, 69%, 18%); 
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
-    table-layout: fixed; 
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #fff8dc; 
+}
 
-  th, td {
-    padding: 10px;
-    border-bottom: 1px solid #d2b48c; 
-    text-align: center;
-    background-color: #f5f5dc; 
-    color: #5c4033; 
-  }
-  
-  /* Header Styling */
-  th {
-    background-color: #8b4513; 
-    color: black;
-    padding: 12px 15px;
-    font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
-    border-bottom: 2px solid #a0522d; 
-  }
-  
- 
-  td {
-    padding: 10px 15px; 
-    border-bottom: 1px solid #d2b48c; 
-    background-color: #f5f5dc; 
-    color: #5c4033; 
-    font-size: 20px;
-  }
-  
- 
-  tr:hover td {
-    background-color: #deb887;
-  }
-  
+h1 {
+  padding: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 200;
+  text-align: center; 
+  color: hsl(4, 69%, 18%);
+  font-size: 40px; 
+  margin-bottom: 20px;
+}
+
+.demo-button-container {
+  padding: 12px;
+  text-align: left; 
+  margin-bottom: 10px; 
+}
+
+button {
+  background-color: hsl(4, 69%, 18%);
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 15px; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+  margin-right: 10px; 
+}
+
+button:hover {
+  background-color: hsl(4, 69%, 28%); 
+  transform: translateY(-2px); 
+}
+
+button:active {
+  background-color: #5c4033; 
+  transform: translateY(0); 
+}
+
+.table1 {
+  padding-left:200px ;
+  padding-right:200px ;
+}
+
+table {
+  width: 70%;
+  margin: 0 auto; 
+  border-collapse: collapse;
+  background-color: #f5f5dc; 
+  border: 1px solid hsl(4, 69%, 18%); 
+  border-radius: 5px; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+  table-layout: fixed;
+}
+
+th, td {
+  border-bottom: 1px solid #d2b48c; 
+  text-align: center;
+  background-color: #f5f5dc; 
+  color: #5c4033; 
+  font-size: 15px;
+}
+
+th {
+  background-color: #8b4513; 
+  color: black;
+  border-bottom: 2px solid #a0522d; 
+  font-weight: bold;
+}
+
+tr:hover td {
+  background-color: #efe8e4;
+}
