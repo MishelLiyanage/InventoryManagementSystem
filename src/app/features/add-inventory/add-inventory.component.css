@@ -2,10 +2,11 @@
     background-color: #efe8e4; 
     padding: 40px; 
     border-radius: 15px;
-    width: 800px; 
+    width: 500px; 
     margin: auto;
-    font-size: 30px; 
+    font-size: 13px; 
     box-shadow: 50px;
+    font-weight: bold;
 }
 
 h1 {
@@ -13,24 +14,20 @@ h1 {
     color: #5b1c0c;
     font-family: Arial, sans-serif;
     font-weight: bold;
-    font-size: 70px;
+    font-size: 40px;
     margin-bottom: 30px;  
+    padding: 15px;
 }
 
 .mb-3 {
-    padding: 15px;  
+    padding: 10px;  
     border: 1px solid #210806; 
     border-radius: 10px;  
     display: flex;
     justify-content: space-between;  
     align-items: center;
-    font-size: 25px; 
-}
-
-.form-check {
-    display: inline-block;
-    margin-right: 20px; 
-    font-size: inherit; 
+    font-size: 13px; 
+    font-weight: bold;
 }
 
 .form-group {
@@ -41,16 +38,13 @@ h1 {
 }
 
 .form-group label {
-    margin-bottom: 10px;  
     color: #5b1c0c; 
     font-weight: bold;
     font-size: inherit; 
 }
 
 .form-check-input {
-    transform: scale(1.5); /* Increase the size of the radio buttons */
-    margin-right: 10px;  
-    font-size: 20px; 
+    transform: scale(1.2);
 }
 
 .form-control {
@@ -64,8 +58,7 @@ h1 {
 }
 
 .btn {
-    background-color:hsl(4, 69%, 18%);
-    ; 
+    background-color: hsl(4, 69%, 18%);
     border: none;
     padding: 15px 25px; 
     color: white;
@@ -79,12 +72,6 @@ h1 {
 
 .btn:hover {
     background-color: hsl(4, 69%, 28%);
-    ; 
-}
-
-input[type="radio"] {
-    margin-left: 5px;
-    font-size: inherit; 
 }
 
 label {
