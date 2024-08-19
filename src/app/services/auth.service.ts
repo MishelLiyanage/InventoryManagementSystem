@@ -6,12 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost/ims-backend/login.php'; 
+  private apiLoginUrl = 'http://localhost/ims-backend/login.php'; 
 
   constructor(private http: HttpClient) {}
 
   login(username: string, password: string): Observable<any> {
     console.log(username + " " + password);
-    return this.http.post<any>(this.apiUrl, { username, password });
+    return this.http.post<any>(this.apiLoginUrl, { username, password });
   }
 }
