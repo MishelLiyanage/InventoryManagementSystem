@@ -14,9 +14,11 @@
       <input
         type="text"
         class="form-control"
+        required
         [(ngModel)]="username"
         name="username"
       />
+      <div *ngIf="usernameError" class="error">{{ usernameError }}</div>
     </div>
 
     <div class="form-group">
@@ -24,9 +26,11 @@
       <input
         type="password"
         class="form-control"
+        required
         [(ngModel)]="password"
         name="password"
       />
+      <div *ngIf="passwordError" class="error">{{ passwordError }}</div>
     </div>
 
     <button class="btn" type="submit">Log In</button>

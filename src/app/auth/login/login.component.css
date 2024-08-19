@@ -31,7 +31,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.topic-signup h3{
+.topic-signup h3 {
     color: hsl(4, 69%, 18%);
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -78,14 +78,14 @@
     background-color: hsl(12, 77%, 30%);
 }
 
-.signup{
+.signup {
     text-align: center;
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
 
 }
 
-.btn-signup{
+.btn-signup {
     background-color: #efe8e4;
     border: 2px solid hsl(12, 77%, 20%);
     color: hsl(12, 77%, 20%);
@@ -95,4 +95,9 @@
     /* display: block; */
     padding: 5px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
 }

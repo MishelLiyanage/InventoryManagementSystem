@@ -12,17 +12,52 @@ import { LayoutConfig } from '../../models/config/layout-config';
 export class LoginComponent {
   username: string = '';
   password: string = '';
+  usernameError: string = '';
+  passwordError: string = '';
 
   constructor(
     private authService: AuthService,
     private configService:LayoutConfigService, 
     private router: Router) {}
 
-    ngAfterViewInit(): void {
+  ngAfterViewInit(): void {
     this.configService.setConfig(new LayoutConfig(false,false,false))
   }  
 
+  validateForm(): boolean {
+    let isValid = true;
+
+    // Reset error messages
+    this.usernameError = '';
+    this.passwordError = '';
+
+    // Username validation
+    if (!this.username) {
+      this.usernameError = 'Username is required';
+      isValid = false;
+    } else if (this.username.length < 4 || this.username.length > 10) {
+      this.usernameError = 'Username must be between 4 and 10 characters';
+      isValid = false;
+    }
+
+    // Password validation
+    if (!this.password) {
+      this.passwordError = 'Password is required';
+      isValid = false;
+    } else if (this.password.length < 5 || this.password.length > 10) {
+      this.passwordError = 'Password must be between 5 and 10 characters';
+      isValid = false;
+    }
+
+    return isValid;
+  }
+
   login() {
+    // Run validations first
+    if (!this.validateForm()) {
+      return;
+    }
+
     console.log(this.username + " " + this.password);
     this.authService.login(this.username, this.password).subscribe(response => {
       if (response.success) {
