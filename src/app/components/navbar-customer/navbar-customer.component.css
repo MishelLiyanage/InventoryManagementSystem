@@ -1,6 +1,6 @@
 .sidebar {
     width: 250px;
-    height: 100%;
+    height: 580px;
     background-color: #f5e8dd;
     /* Match the background color */
     padding: 20px;
@@ -26,8 +26,8 @@
 
 .section ul li {
     /* margin-bottom: 10px; */
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     font-size: 15px;
 }
 

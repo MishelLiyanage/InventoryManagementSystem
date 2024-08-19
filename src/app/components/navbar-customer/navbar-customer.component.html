@@ -1,20 +1,33 @@
 <div class="sidebar">
     <div class="section">
       <h3>GENERAL</h3>
+      <!-- <ul>
+        <div (click)="navigateToDashboard()">
+          <li>Dashboard</li>
+        </div>
+      </ul> -->
     </div>
   
     <div class="section">
       <h3 style="font-weight: bold">Inventory</h3>
       <ul>
-        <li><a href="#">View Inventory</a></li>
-        <li><a href="#">Search Inventory</a></li>
+        <div (click)="navigateToViewInventory()">
+          <li>View Inventory</li>
+        </div>
+        
+        <div (click)="navigateToSearchInventory()">
+          <li>Search Inventory</li>
+        </div>
       </ul>
     </div>
   
     <div class="section">
       <h3 style="font-weight: bold">Sales Orders</h3>
       <ul>
-        <li><a href="#">Place an Order</a></li>
+        <div (click)="navigateToOrderInventory()">
+          <li>Place an Order</li>
+        </div>
+        
       </ul>
     </div>
   

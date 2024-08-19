@@ -6,20 +6,30 @@
   <div class="section">
     <h3 style="font-weight: bold">Inventory</h3>
     <ul>
-      <div class="pagelinks">
-        <li><a href="#">Add Inventory</a></li>
+      <div class="pagelinks" (click)="navigateToAddInventory()">
+        <li>Add Inventory</li>
+      </div>
+
+      <div (click)="navigateToUpdateInventory()">
+        <li>Delete/Update Inventory</li>
       </div>
       
-      <li><a href="#">Delete/Update Inventory</a></li>
-      <li><a href="#">View Inventory</a></li>
-      <li><a href="#">Search Inventory</a></li>
+      <div (click)="navigateToViewInventory()">
+        <li>View Inventory</li>
+      </div>
+      
+      <div (click)="navigateToSearchInventory()">
+        <li>Search Inventory</li>
+      </div>
     </ul>
   </div>
 
   <div class="section">
     <h3 style="font-weight: bold">Sales Orders</h3>
     <ul>
-      <li><a href="#">View Orders</a></li>
+      <div (click)="navigateToViewOrders()">
+        <li>View Orders</li>
+      </div>
     </ul>
   </div>
 
