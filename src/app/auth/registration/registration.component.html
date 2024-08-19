@@ -18,6 +18,7 @@
         [(ngModel)]="userModel.firstname"
         name="firstname"
       />
+      <div *ngIf="validationErrors.firstname" class="error">{{ validationErrors.firstname }}</div>
     </div>
 
     <div class="form-group">
@@ -30,6 +31,7 @@
           [(ngModel)]="userModel.lastname"
           name="lastname"
         />
+        <div *ngIf="validationErrors.lastname" class="error">{{ validationErrors.lastname }}</div>
       </div>
 
       <div class="form-group">
@@ -42,6 +44,7 @@
           [(ngModel)]="userModel.email"
           name="email"
         />
+        <div *ngIf="validationErrors.email" class="error">{{ validationErrors.email }}</div>
       </div>
 
       <div class="form-group">
@@ -54,6 +57,7 @@
           [(ngModel)]="userModel.username"
           name="username"
         />
+        <div *ngIf="validationErrors.username" class="error">{{ validationErrors.username }}</div>
       </div>
 
     <div class="form-group">
@@ -66,6 +70,7 @@
         [(ngModel)]="userModel.password"
         name="password"
       />
+      <div *ngIf="validationErrors.password" class="error">{{ validationErrors.password }}</div>
     </div>
 
     <div class="form-group">
@@ -78,6 +83,7 @@
         [(ngModel)]="userModel.city"
         name="city"
       />
+      <div *ngIf="validationErrors.city" class="error">{{ validationErrors.city }}</div>
     </div>
 
     <div class="form-group">
@@ -90,6 +96,7 @@
         [(ngModel)]="userModel.telno"
         name="telno"
       />
+      <div *ngIf="validationErrors.telno" class="error">{{ validationErrors.telno }}</div>
     </div>
 
     <button class="btn" type="submit">Sign Up</button>
