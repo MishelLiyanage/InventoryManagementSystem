@@ -1,10 +1,10 @@
 .registration-container {
-    background-image: url('./login-background.png');
+    background-image: url('../../../assets/login-background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     filter: blur(3px);
-    height: 500px;
+    height: 727px;
     width: 100%;
 }
 
@@ -14,8 +14,6 @@
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     width: 25%;
-    margin-top: 50px;
-    /* margin-left: 600px; */
     position: absolute;
     top: 50%;
     left: 50%;

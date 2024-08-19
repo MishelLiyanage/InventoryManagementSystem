@@ -1,3 +1,7 @@
+.title{
+    line-height: 1.2;
+}
+
 .dashboard-container{
     display: flex;
     align-items: center;
@@ -5,8 +9,8 @@
 }
 .dashboard-header{
     margin-left: 75px;
-    margin-top: 225px;
-    margin-bottom: 225px;
+    margin-top: 160px;
+    margin-bottom: 161px;
     margin-right: 0%;
 }
 
@@ -21,10 +25,11 @@
     margin-top: 35px;
     color: hsl(4, 69%, 8%);
     font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
 }
 
 .welcomeImage{
-    margin-right: 80px;
+    margin-right: 50px;
     margin-left: 0%;
     height: 500px;
     width: auto;

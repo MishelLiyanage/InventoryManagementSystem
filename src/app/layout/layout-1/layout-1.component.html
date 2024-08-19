@@ -1,0 +1,20 @@
+<div class="header">
+    <app-header *ngIf="config.toolBar"></app-header>
+</div>
+
+<div class="container" fxLayout="row" fxFill fxLayoutAlign="start start" >
+    <div class="navbar"  fxLayoutAlign="start start">
+        <app-navbar-admin  *ngIf="config.adminSideNav"></app-navbar-admin>
+        <app-navbar-customer *ngIf="config.customerSideNav"></app-navbar-customer>
+    </div>
+    <div class="outlet" fxFlex>
+        <router-outlet></router-outlet> 
+        <!-- <app-navbar-admin  *ngIf="config.sideNav"></app-navbar-admin> -->
+    </div>
+   
+        <!-- -->
+  
+</div>
+<div class="footer">
+    <app-footer *ngIf="config.footer"></app-footer>
+</div>

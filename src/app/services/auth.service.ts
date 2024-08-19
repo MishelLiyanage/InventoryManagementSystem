@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost/ims-backend/login.php'; // Replace with your actual backend URL
+  private apiUrl = 'http://localhost/ims-backend/login.php'; 
 
   constructor(private http: HttpClient) {}
 

@@ -5,9 +5,8 @@
     <h4>Create your account</h4>
   </div>
 
-  <!-- {{ userForm.value | json }} -->
   <hr />
-  <!-- {{ userModel | json }} -->
+
   <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
     <div class="form-group">
       <label for="firstname">First name: </label>
@@ -90,7 +89,7 @@
 
     <div class="signup">
       <label>Already have an account? </label>
-      <button class="btn-signup">Log In</button>
+      <button class="btn-signup" (click)="navigateToLogin()">Log In</button>
     </div>
   </form>
 </div>
