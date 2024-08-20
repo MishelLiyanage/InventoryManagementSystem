@@ -16,6 +16,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { HttpClientModule } from '@angular/common/http';
+import { MatIconModule } from '@angular/material/icon';
+
 
 const routes: Routes = [
   {
@@ -70,7 +72,8 @@ const routes: Routes = [
     MatFormFieldModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule
   ]
 })
 export class FeatureModule { }
