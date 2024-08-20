@@ -1,43 +1,48 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
-export interface PeriodicElement {
+export interface Products {
+  id: number;
+  category: string;
+  quantity: number;
   name: string;
-  position: number;
-  weight: number;
-  symbol: string;
+  date: Date;
+  manufacturer: string;
 }
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
-];
 
 @Component({
   selector: 'app-update-delete-inventory',
   templateUrl: './update-delete-inventory.component.html',
   styleUrl: './update-delete-inventory.component.css'
 })
-export class UpdateDeleteInventoryComponent {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'actions']
-  dataSource = ELEMENT_DATA;
+export class UpdateDeleteInventoryComponent implements OnInit{
+  displayedColumns: string[] = ['id', 'category', 'itemname', 'priceunit', 'quantityinstock', 'description', 'addeddate', 'actions'];
+  dataSource: any[] = [];
 
-  onUpdate(element: any) {
-  
-    console.log('Update', element);
+  constructor(private router: Router, private http: HttpClient) {}
+
+  ngOnInit(): void {
+    this.loadInventory();
   }
 
-  
-  onDelete(element: any) {
-
-    console.log('Delete', element);
+  loadInventory() {
+    this.http.get<Products[]>('http://localhost/imsBA/get-products.php').subscribe(data => {
+      this.dataSource = data;
+    }, error => {
+      console.error('Error loading inventory data:', error);
+    });
   }
 
+  onUpdate(element: Products) {
+    this.router.navigate(['/feature/update-form', element.id]);
+  }
+
+  onDelete(element: Products) {
+    this.http.post('http://localhost/imsBA/delete-product.php', { id: element.id }).subscribe(() => {
+      this.loadInventory(); // Reload the inventory after deletion
+    }, error => {
+      console.error('Error deleting product:', error);
+    });
+  }
 }
