@@ -37,7 +37,7 @@ const routes: Routes = [
     component: UpdateDeleteInventoryComponent
   },
   {
-    path: 'update-form',
+    path: 'update-form/:id',
     component: UpdateFormComponent
   },
   {
