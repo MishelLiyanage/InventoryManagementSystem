@@ -16,7 +16,8 @@
 
 .outlet{
 overflow-y: auto;
-height: 100%;
+height: 663px;
+/* height: 100%; */
 }
 
 .footer{
