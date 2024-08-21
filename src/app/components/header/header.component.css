@@ -3,9 +3,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #5b1c0c;
-  color: #efe8e4;
-  /* White text */
+  background-color: #ee8254;
+  color: black;
+  font-family: sans-serif;
+  font-weight: bold;
+  box-shadow: 0 7px 3px -3px #12121230;
 }
 
 .logo {
@@ -13,20 +15,15 @@
   align-items: center;
 }
 
+.logo span{
+  font-size: 17px;
+  width: 260px;
+}
+
 .logo img {
-  height: 40px;
+  height: 45px;
   /* Adjust as necessary */
   margin-right: 10px;
-}
-
-.center-links a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #fff;
-}
-
-.center-links a:hover {
-  text-decoration: underline;
 }
 
 .user-profile {
@@ -38,13 +35,9 @@
   margin-right: 30px;
 }
 
-.user-profile img {
-  height: 40px;
-  /* Adjust as necessary */
-  border-radius: 50%;
-}
-
 .header-right {
-  display: inline-flex;
-  margin-left: 1150px;
+  display: flex;
+  margin-left: 900px;
+  font-size: 17px;
+  width: 230px;
 }

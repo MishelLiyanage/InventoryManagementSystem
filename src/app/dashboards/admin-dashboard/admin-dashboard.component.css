@@ -25,12 +25,12 @@
 .dashboard-header p {
     margin-top: 35px;
     color: hsl(4, 69%, 8%);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     text-align: justify;
 }
 
 .welcomeImage {
-    margin-right: 80px;
+    margin-right: 70px;
     margin-left: 0%;
     height: 550px;
     width: auto;
@@ -46,7 +46,7 @@
 }
 
 .card {
-    background: hsl(22, 26%, 72%);
+    background: hsla(33, 87%, 91%, 0.8);
     padding: 20px;
     border-radius: 10px;
     flex: 1;
@@ -57,21 +57,29 @@
     border: 3px solid #210806;
 }
 
+.card:hover{
+    transform: translateY(-3px); 
+    background-color: #de8254;
+    box-shadow: 0 7px 4px -4px #12121230;
+}
+
 .card-content {
     padding-top: 7px;
     text-align: center;
+    font-family: sans-serif;
 }
 
 .card-number {
-    font-size: 27px;
+    font-family: sans-serif;
+    font-size: 25px;
     font-weight: bold;
     padding-right: 20px;
     padding-left: 20px;
 }
 
 .card-label {
-    color: hsl(12, 77%, 15%);
-    font-size: 18px;
+    color: black;
+    font-size: 17px;
     margin-right: 0%;
     padding-right: 0%;
 }
@@ -85,24 +93,30 @@
 .dashboard-table{
     margin-left: 85px;
     margin-right: 85px;
+    margin-bottom: 30px;
 }
 
 .dashboard-table h2{
     color: #210806;
 }
 
-.table{
-    border: 3px solid #210806;
-
+table{
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); 
+    border: 1px solid hsl(14, 97%, 35%);
+    border-collapse: collapse;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: hsla(33, 87%, 91%, 0.8);
+    font-family: sans-serif;
 }
 
 .thead{
-    background-color: #5b1c0c;
-    color: white;
+    background-color: #dc692f;
+    color: hsl(0, 0%, 0%);
     font-style: normal;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: sans-serif;
 }
 
 .tbody tr:hover{
-    background-color: hsl(12, 54%, 79%);
+    background-color: hsla(33, 94%, 79%, 0.8);
 }
