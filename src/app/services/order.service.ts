@@ -7,6 +7,12 @@ interface InventoryItem {
   priceunit: number;
 }
 
+export interface Order {
+  id: number;
+  customerId: number;
+  amount: number;
+  date: Date;
+}
 @Injectable({
   providedIn: 'root'
 })
@@ -30,5 +36,9 @@ export class OrderService {
 
   placeOrder(orderData: any): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}/placeOrder.php`, orderData);
+  }
+
+  getOrders(): Observable<Order[]> {
+    return this.http.get<Order[]>(`${this.apiUrl}/getOrders.php`);
   }
 }
