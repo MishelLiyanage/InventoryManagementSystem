@@ -28,4 +28,8 @@ export class NavbarAdminComponent {
   navigateToViewOrders(){
     this.router.navigate(['/feature/view-orders']);
   }
+
+  navigateToReports(){
+    this.router.navigate(['/report/view-reports']);
+  }
 }
