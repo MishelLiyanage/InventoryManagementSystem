@@ -30,8 +30,8 @@
 
     <div class="card">
       <div class="card-content">
-        <span class="card-number">2</span>
-        <span class="card-label">Product categories</span>
+        <span class="card-number">3</span>
+        <span class="card-label">Product Categories</span>
         <!-- <span class="icon"><img src="../../../assets/customer.png" alt=""></span> -->
       </div>
     </div>
@@ -55,39 +55,29 @@
 
   <div class="dashboard-table">
     <h2>Customer Details</h2>
-      <table class="table">
-        <thead class="thead">
-          <tr>
-            <th scope="col">Customer ID</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">Email</th>
-            <th scope="col">Contact Number</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>mdo</td>
-            <td>0714021860</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>fat</td>
-            <td>0716965029</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>twitter</td>
-            <td>0717640073</td>
-          </tr>
-        </tbody>
-      </table>
+    <table class="table">
+      <thead class="thead">
+        <tr>
+          <th scope="col">Customer ID</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Username</th>
+          <th scope="col">City</th>
+          <th scope="col">Contact Number</th>
+        </tr>
+      </thead>
+      <tbody class="tbody">
+        <tr *ngFor="let customer of customers">
+          <th scope="row">{{ customer.id }}</th>
+          <td>{{ customer.firstname }}</td>
+          <td>{{ customer.lastname }}</td>
+          <td>{{ customer.email }}</td>
+          <td>{{ customer.username }}</td>
+          <td>{{ customer.city }}</td>
+          <td>{{ customer.telno }}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>

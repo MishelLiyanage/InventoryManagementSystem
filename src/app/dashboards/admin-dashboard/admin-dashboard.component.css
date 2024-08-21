@@ -102,3 +102,7 @@
     font-style: normal;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.tbody tr:hover{
+    background-color: hsl(12, 54%, 79%);
+}
