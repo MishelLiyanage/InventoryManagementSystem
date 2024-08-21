@@ -146,8 +146,6 @@ export class OrderInventoryComponent implements OnInit {
   
 }
 
-
-
 interface InventoryItem {
   itemname: string;
   priceunit: number;
