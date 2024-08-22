@@ -1,16 +1,21 @@
-.container {
-  display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  justify-content: center; 
-  width: 100%;
-  margin-top: 20px; 
+.headding {
+  padding-left: 65px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: white;
+  text-align: left;
+  border: 1px solid white;
+  box-shadow: 0 5px 3px -3px #12121230;
+  margin-bottom: 20px;
 }
 
 h1 {
-  text-align: center; 
+  font-size: 30px;
   margin-bottom: 20px;
-  margin-top: 20px; 
+  margin-top: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #3C241D;
 }
 
 .table-responsive {
@@ -20,18 +25,18 @@ h1 {
 }
 
 table {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   border-collapse: collapse;
   border-radius: 15px;
   overflow: hidden;
   background-color: hsla(33, 87%, 91%, 0.8);
   font-family: sans-serif;
-  margin-left:85px;
+  margin-left: 85px;
   margin-right: 85px;
 }
 
 thead th {
-  background-color: #d96426; 
+  background-color: #d96426;
   text-align: left;
   padding: 10px;
   border: none;
@@ -40,4 +45,3 @@ thead th {
 tbody tr:hover {
   background-color: hsla(33, 94%, 79%, 0.8);
 }
-
