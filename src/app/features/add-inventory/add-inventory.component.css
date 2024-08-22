@@ -1,47 +1,57 @@
+.headding {
+    padding-left: 65px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: white;
+    text-align: left;
+    border: 1px solid white;
+    box-shadow: 0 5px 3px -3px #12121230;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #3C241D;
+}
+
 .container-fluid {
-    background-color: hsl(18, 81%, 77%, 60%); 
-    padding: 40px; 
+    background-color: hsl(18, 81%, 77%, 60%);
+    padding: 40px;
     border-radius: 15px;
-    width: 500px; 
+    width: 500px;
     margin: auto;
-    font-size: 13px; 
+    font-size: 13px;
     box-shadow: 50px;
     font-weight: bold;
     margin-bottom: 30px;
 }
 
-h1 {
-    text-align: center;
-    color: hsl(0, 0%, 10%);
-    font-family: sans-serif;
-    font-weight: bold;
-    margin-bottom:20px;  
-    font-size: 30px;
-    padding: 15px;
-}
-
 .mb-3 {
-    padding: 10px;  
-    border: 1px solid #210806; 
-    border-radius: 10px;  
+    padding: 10px;
+    border: 1px solid #210806;
+    border-radius: 10px;
     display: flex;
-    justify-content: space-between;  
+    justify-content: space-between;
     align-items: center;
-    font-size: 13px; 
+    font-size: 13px;
     font-weight: bold;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;  
-    font-size: inherit; 
+    margin-bottom: 20px;
+    font-size: inherit;
 }
 
 .form-group label {
-    color: hsl(0, 0%, 10%); 
+    color: hsl(0, 0%, 10%);
     font-weight: bold;
-    font-size: inherit; 
+    font-size: inherit;
 }
 
 .form-check-input {
@@ -49,28 +59,28 @@ h1 {
 }
 
 .form-control {
-    border: 1px solid #210806; 
-    border-radius: 10px;  
-    padding: 10px;  
-    color: hsl(0, 0%, 10%); 
-    font-size: inherit; 
-    width: 100%;  
-    box-sizing: border-box;  
+    border: 1px solid #210806;
+    border-radius: 10px;
+    padding: 10px;
+    color: hsl(0, 0%, 10%);
+    font-size: inherit;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .btn {
-    background-color:  hsl(21, 95%, 22%);
+    background-color: hsl(21, 95%, 22%);
     border: none;
-    padding: 15px 25px; 
+    padding: 15px 25px;
     color: white;
     font-family: sans-serif;
-    font-size: 15px; 
+    font-size: 15px;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 10px;  
+    border-radius: 10px;
     display: block;
-    width: 100%;  
-    margin-top: 30px;  
+    width: 100%;
+    margin-top: 30px;
 }
 
 .btn:hover {
@@ -80,5 +90,5 @@ h1 {
 
 label {
     font-family: Arial, sans-serif;
-    font-size: inherit; 
+    font-size: inherit;
 }

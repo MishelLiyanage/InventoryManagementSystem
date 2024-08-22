@@ -7,11 +7,24 @@
   margin-top: 20px; 
 }
 
-h1 {
-  text-align: center; 
+.headding {
+  padding-left: 65px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: white;
+  text-align: left;
+  border: 1px solid white;
+  box-shadow: 0 5px 3px -3px #12121230;
   margin-bottom: 20px;
-  margin-top: 20px; 
+}
+
+h1 {
   font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #3C241D;
 }
 
 .table-responsive {

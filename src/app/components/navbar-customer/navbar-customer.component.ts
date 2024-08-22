@@ -9,9 +9,9 @@ import { Router } from '@angular/router';
 export class NavbarCustomerComponent {
   constructor(private router: Router){}
 
-  // navigateToDashboard(){
-  //   this.router.navigate(['/dashboard/customer-dashboard']);
-  // }
+  navigateToDashboard(){
+    this.router.navigate(['/dashboard/customer-dashboard']);
+  }
 
   navigateToViewInventory(){
     this.router.navigate(['/feature/view-inventory']);

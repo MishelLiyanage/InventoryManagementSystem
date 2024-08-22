@@ -21,4 +21,7 @@ export class InventoryService {
     return this.http.get<InventoryItem[]>(`${this.apiUrl}/getInventory.php`);
   }
 
+  getProductCount(): Observable<{ productCount: number }> {
+    return this.http.get<{ productCount: number }>(`${this.apiUrl}/getProductCount.php`);
+  }
 }

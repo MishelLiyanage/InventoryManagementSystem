@@ -34,11 +34,16 @@ export class OrderService {
     return this.http.get<InventoryItem[]>(`${this.apiUrl}/inventory.php?category=party items`);
   }
 
+
   placeOrder(orderData: any): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}/placeOrder.php`, orderData);
   }
 
   getOrders(): Observable<Order[]> {
     return this.http.get<Order[]>(`${this.apiUrl}/getOrders.php`);
+  }
+
+  getOrderCount(): Observable<{ orderCount: number }> {
+    return this.http.get<{ orderCount: number }>(`${this.apiUrl}/getOrdersCount.php`);
   }
 }
