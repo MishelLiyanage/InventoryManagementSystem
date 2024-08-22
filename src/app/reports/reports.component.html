@@ -5,52 +5,67 @@
         <div class="report-card">
           <div class="report-header">
             <h2 class="report-title">Reports</h2>
-            <button class="btn-print">Print Reports</button>
+            <button class="btn-print d-print-none" (click)="printPage()">Print Reports</button>
           </div>
-		  <hr>
+		      <hr>
           <div class="report-content">
-            <h3>Weekly Sales</h3>
+            <h3 class="report-title">Weekly Sales Summary</h3>
             <canvas id="weeklySalesChart"></canvas>
 
           </div>
         </div>
         <div class="report-card">
           <div class="report-header">
-            <h2 class="report-title">Supplier Performance Report (Top 5 Suppliers)</h2>
+            <h2 class="report-title">Daily Orders Report</h2>
           </div>
-          <canvas id="supplierPerformanceChart"></canvas>
+          <canvas id="dailyOrdersChart"></canvas>
           
         </div>
-      </div>
+    </div>
       <div class="col-md-4">
         <div class="report-card">
           <div class="report-header">
-            <h2 class="report-title">Top Suppliers</h2>
+            <h2 class="report-title">Inventory Stock Report</h2>
           </div>
-          <canvas id="topSuppliersChart"></canvas>
+          <canvas id="inventoryStockChart"></canvas>
         </div>
-        <div class="report-card">
-          <div class="report-section">
-            <div class="report-header">
-              <h2 class="report-title">Reports for Last Month</h2>
-              <p>From 01 Jul - 31 Jul</p>
-            </div>
-            <div class="report-actions">
-              <button class="btn-download">Download CSV</button>
-              <button class="btn-view">View</button>
-            </div>
+        
+
+
+      
+      <div class="report-card d-print-none">
+
+        <div class="report-section">
+          <div class="report-header">
+            <h2 class="report-title">Inventory Stock Report</h2>
+            
           </div>
-          <div class="report-section">
-            <div class="report-header">
-              <h2 class="report-title">Defect Rate Report</h2>
-              <p>Product Defects & Supplier Origin</p>
-            </div>
-            <div class="report-actions">
-              <button class="btn-download">Download CSV</button>
-              <button class="btn-view">View</button>
-            </div>
+          <div class="report-actions"> 
+            <button class="btn-download" (click)="downloadCsv('inventory_stock')">Download CSV</button>
+          </div>
+        </div>
+        <div class="report-section">
+          <div class="report-header">
+            <h2 class="report-title">Weekly Sales Summary</h2>
+            
+          </div>
+          <div class="report-actions"> 
+            <button class="btn-download" (click)="downloadCsv('weekly_sales')">Download CSV</button>
+          </div>
+        </div>
+        <div class="report-section">
+          <div class="report-header">
+            <h2 class="report-title">Daily Orders Report</h2>
+            
+          </div>
+          <div class="report-actions"> 
+            <button class="btn-download" (click)="downloadCsv('daily_orders')">Download CSV</button>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- <a href="http://zxzw.rf.gd/report_generator.php?report=inventory_stock&format=csv" class="btn-download"> <a href="http://zxzw.rf.gd/report_generator.php?report=daily_orders&format=csv" class="btn-download"> <a href="http://zxzw.rf.gd/report_generator.php?report=weekly_sales&format=csv" class="btn-download"> -->
+
+  
