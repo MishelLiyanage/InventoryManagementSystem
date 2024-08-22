@@ -1,0 +1,11 @@
+{
+    "/asgspi": {
+      "target": "",
+      "secure": false,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/api": ""
+      }
+    }
+  }
+  
