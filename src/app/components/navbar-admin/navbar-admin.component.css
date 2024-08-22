@@ -1,0 +1,41 @@
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #f5e8dd;
+    /* Match the background color */
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h3 {
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+.section ul {
+    list-style-type: none;
+    padding-left: 15px;
+    margin: 0;
+}
+
+.section ul li {
+    /* margin-bottom: 10px; */
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 15px;
+}
+
+.section ul li a {
+    color: #333333;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.section ul li a:hover {
+    text-decoration: none;
+}

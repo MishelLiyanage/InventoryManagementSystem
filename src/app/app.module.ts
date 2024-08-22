@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './auth/registration/registration.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './auth/login/login.component';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { AddInventoryComponent } from './features/add-inventory/add-inventory.component';
 import { UpdateDeleteInventoryComponent } from './features/update-delete-inventory/update-delete-inventory.component';
 import { MatTableModule } from '@angular/material/table';
@@ -16,10 +14,23 @@ import { SearchFilterInventoryComponent } from './features/search-filter-invento
 import { ReportsComponent } from './reports/reports.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-
+import { NavbarAdminComponent } from './components/navbar-admin/navbar-admin.component';
+import { NavbarCustomerComponent } from './components/navbar-customer/navbar-customer.component';
+import { OrderInventoryComponent } from './features/order-inventory/order-inventory.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ViewOrdersComponent } from './features/view-orders/view-orders.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AdminDashboardComponent } from './dashboards/admin-dashboard/admin-dashboard.component';
+import { CustomerDashboardComponent } from './dashboards/customer-dashboard/customer-dashboard.component';
 
 @NgModule({
   declarations: [
+    AppComponent,
     RegistrationComponent,
     LoginComponent,
     AddInventoryComponent,
@@ -27,22 +38,31 @@ import { FooterComponent } from './components/footer/footer.component';
     UpdateFormComponent,
     ViewInventoryComponent,
     SearchFilterInventoryComponent,
-    reports,
     HeaderComponent,
-    FooterComponent
-
+    FooterComponent,
+    ReportsComponent,
+    NavbarAdminComponent,
+    NavbarCustomerComponent,
+    OrderInventoryComponent,
+    ViewOrdersComponent,
+    AdminDashboardComponent,
+    CustomerDashboardComponent
   ],
   imports: [
-    AppComponent,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     MatTableModule,
-    ReportsComponent
+    MatInputModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
-  providers: [
-    provideAnimationsAsync()
-  ],
-  
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
+
