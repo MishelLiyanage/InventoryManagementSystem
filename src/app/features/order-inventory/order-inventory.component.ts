@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OrderService } from '../../services/order.service';
 import { HttpClient } from '@angular/common/http'; 
+import { AuthService } from '../../services/auth.service';
 
 
 
@@ -17,7 +18,7 @@ export interface OrderItem {
 })
 export class OrderInventoryComponent implements OnInit {
 
-  userid: number = 1;
+  userid: number | null = 0;
   displayedColumns: string[] = ['name', 'quantity', 'price','action'];
   itemDataSource: OrderItem[] = [];
 
@@ -34,10 +35,15 @@ export class OrderInventoryComponent implements OnInit {
   cakeTools: InventoryItem[] = [];
   partyItems: InventoryItem[] = [];
 
-  constructor(private OrderService: OrderService, private http: HttpClient) {} // <-- Added HttpClient here
+  constructor(
+    private OrderService: OrderService, 
+    // private http: HttpClient, 
+    private authService: AuthService) {} // <-- Added HttpClient here
 
   ngOnInit(): void {
     this.loadInventory();
+
+    this.userid = this.authService.getUserId();
   }
 
   loadInventory() {
