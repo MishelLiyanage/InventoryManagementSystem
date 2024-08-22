@@ -64,6 +64,9 @@ export class LoginComponent {
         const { id, firstname, role } = response.user;
         console.log('user details: ', response.user);
 
+        this.authService.setUserId(id);
+        this.authService.setfirstname(firstname);
+
          // Redirect based on the role
         if (role === 'admin') {
           console.log('I am the admin');

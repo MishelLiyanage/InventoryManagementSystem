@@ -7,10 +7,10 @@
 
   <div class="header-right">
     <div class="user-profile">
-      <span>Hi, [Username]</span>
+      <span>Hi, {{firstname}}</span>
     </div>
     
-    <div class="logoutbtn">
+    <div class="logoutbtn" (click)="logout()">
       <span>Log Out</span>
     </div>
   </div>
