@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OrderService } from '../../services/order.service';
-import { HttpClient } from '@angular/common/http'; 
-
-
+import { HttpClient } from '@angular/common/http';
 
 export interface OrderItem {
   name: string;
@@ -18,7 +16,7 @@ export interface OrderItem {
 export class OrderInventoryComponent implements OnInit {
 
   userid: number = 1;
-  displayedColumns: string[] = ['name', 'quantity', 'price','action'];
+  displayedColumns: string[] = ['name', 'quantity', 'price', 'action'];
   itemDataSource: OrderItem[] = [];
 
   selectedIngredient: InventoryItem | null = null;
@@ -34,7 +32,7 @@ export class OrderInventoryComponent implements OnInit {
   cakeTools: InventoryItem[] = [];
   partyItems: InventoryItem[] = [];
 
-  constructor(private OrderService: OrderService, private http: HttpClient) {} // <-- Added HttpClient here
+  constructor(private OrderService: OrderService, private http: HttpClient) {}
 
   ngOnInit(): void {
     this.loadInventory();
@@ -60,9 +58,9 @@ export class OrderInventoryComponent implements OnInit {
 
       if (existingIngredient) {
         existingIngredient.quantity += this.ingredientQuantity;
-        existingIngredient.price = (existingIngredient.quantity * this.selectedIngredient.priceunit);
+        existingIngredient.price = existingIngredient.quantity * this.selectedIngredient.priceunit;
       } else {
-        this.itemDataSource = [...this.itemDataSource, { name: this.selectedIngredient.itemname, quantity: this.ingredientQuantity, price: (this.selectedIngredient.priceunit * this.ingredientQuantity) }];
+        this.itemDataSource = [...this.itemDataSource, { name: this.selectedIngredient.itemname, quantity: this.ingredientQuantity, price: this.selectedIngredient.priceunit * this.ingredientQuantity }];
       }
 
       this.resetIngredientForm();
@@ -75,9 +73,9 @@ export class OrderInventoryComponent implements OnInit {
 
       if (existingTool) {
         existingTool.quantity += this.toolQuantity;
-        existingTool.price = (existingTool.quantity * this.selectedTool.priceunit);
+        existingTool.price = existingTool.quantity * this.selectedTool.priceunit;
       } else {
-        this.itemDataSource = [...this.itemDataSource, { name: this.selectedTool.itemname, quantity: this.toolQuantity, price: (this.selectedTool.priceunit * this.toolQuantity) }];
+        this.itemDataSource = [...this.itemDataSource, { name: this.selectedTool.itemname, quantity: this.toolQuantity, price: this.selectedTool.priceunit * this.toolQuantity }];
       }
 
       this.resetToolForm();
@@ -90,9 +88,9 @@ export class OrderInventoryComponent implements OnInit {
 
       if (existingPartyItem) {
         existingPartyItem.quantity += this.partyItemQuantity;
-        existingPartyItem.price = (existingPartyItem.quantity * this.selectedPartyItem.priceunit);
+        existingPartyItem.price = existingPartyItem.quantity * this.selectedPartyItem.priceunit;
       } else {
-        this.itemDataSource = [...this.itemDataSource, { name: this.selectedPartyItem.itemname, quantity: this.partyItemQuantity, price: (this.selectedPartyItem.priceunit * this.partyItemQuantity) }];
+        this.itemDataSource = [...this.itemDataSource, { name: this.selectedPartyItem.itemname, quantity: this.partyItemQuantity, price: this.selectedPartyItem.priceunit * this.partyItemQuantity }];
       }
 
       this.resetPartyItemForm();
@@ -134,16 +132,14 @@ export class OrderInventoryComponent implements OnInit {
       }
     });
   }
+
   removeItem(index: number) {
-    // Remove the item from the itemDataSource array at the specified index
     this.itemDataSource.splice(index, 1);
-    
-    // Update the data source to reflect the changes
     this.itemDataSource = [...this.itemDataSource];
   }
 }
 
 interface InventoryItem {
   itemname: string;
-  priceunit: number;
+  priceunit: number;
 }

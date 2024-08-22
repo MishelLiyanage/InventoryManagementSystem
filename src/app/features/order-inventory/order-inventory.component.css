@@ -1,150 +1,121 @@
-/* General Styling */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #fff8dc;
-}
-
 h1 {
-    padding: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 32px;
     font-weight: bold;
     text-align: center;
-    color: #5c4033;
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-button {
-    width: 100px;
-    height: 80px;
-    background-color: hsl(4, 69%, 18%);
-    color: white;
-    border: none;
-    padding: 20px; 
-    font-size: 14px; 
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-button:hover {
-    background-color: hsl(4, 69%, 28%);
-    transform: translateY(-2px);
-}
+    color: #5b1c0c;
+margin-top: 25px; }
 
 .inventory-container {
-    width: 90%;
     display: flex;
-    justify-content: space-around; /* Adjusted spacing */
-    margin-right: 20px; /* Reduced margin top */
-    padding: 25px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px ;
+    border: #5b1c0c;
 }
 
-/* Form and Table Containers */
 .form-container, .table-container {
-    width: 250px;
-    background-color: #fff;
-    border: 1px solid #d2b48c;
-    border-radius: 10px;
-    margin: 20px;
-    padding: 15px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    flex-grow: 1; 
-    font-size: small;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    background-color: hsla(33, 87%, 91%, 0.9);
+    padding: 25px;
+    margin: 10px;
+    width: 100%;
+    
 }
 
-.form-container {
+.table-responsive {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.form-container mat-form-field {
-    height: 100px;
-    width: 200px;
-    margin: 10px ;
-}
-
-.form-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
     width: 100%;
 }
 
-.form-container mat-form-field,
-.form-container input[type="number"]
- {
-    flex: 1;
-    margin: 0 10px; 
-    width:180px;
-
-}
-.form-container mat-datepicker-toggle{
-    width: 40%;
-}
-
-.table-container table {
-    margin: 15px 0;
-    padding: 15px;
+table {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     border-collapse: collapse;
-    background-color: #f5f5dc;
-    border: 1px solid #a0522d;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: hsla(33, 87%, 91%, 0.9); /* Slightly increased opacity */
+    font-family: sans-serif;
+    width: 100%;
 }
 
-th {
-    background-color: #8b4513;
-    color: black;
-    padding: 8px 10px;
+thead th {
+    background-color: #d96426; 
     text-align: left;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 12px;
+    border: none;
+    font-size: 12px;
+    color: white; /* White text for better contrast */
+}
+
+tbody tr:hover {
+    background-color: hsla(33, 94%, 79%, 0.9); /* Slightly increased opacity */
+}
+
+h5 {
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: #5b1c0c; /* Dark brown color */
+}
+
+.tools-section, .Items-section, .Ingredients-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    
+}
+
+.tools-section button,
+.Items-section button,
+.Ingredients-section button{
+    flex: 1; 
+    font-size: 12px;
+    height: 40px;
+    width: 100%; 
+    padding: 8px;
+}
+
+
+.tools-section label,
+.tools-section select,
+.tools-section input,
+.Items-section select,
+.Items-section input,
+.Items-section label,
+.Ingredients-section select,
+.Ingredients-section input,
+.Ingredients-section label {
+    flex: 1;  
+    height: 40px;
+    width: 100%; 
+    padding: 8px;
+    border-radius: 8px;
+   
+   
+}
+
+button {
+    cursor: pointer;
+    background-color: hsl(12, 77%, 20%);
+    color: white;
+    border-radius: 8px;
+    padding: 10px 20px; 
+    font-size: 12px;
     font-weight: bold;
-    border-bottom: 2px solid #a0522d;
-    font-size: 15px;
+    height: 50px;
+    width: 100%; 
+    padding: 8px;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
 }
 
-td {
-    padding: 8px 12px;
-    border-bottom: 1px solid #d2b48c;
-    background-color: #f5f5dc;
-    color: #5c4033;
-    font-size: 15px;
+button:hover {
+    background-color: hsl(12, 77%, 30%); /* Slightly lighter on hover */
 }
 
-tr:hover td {
-    background-color: #efe8e4;
-}
-
-
-.table-container td, .table-container th {
-    text-align: center;
-}
-
-.table-container table {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#OrderBtn {
-    text-align: center;
-    margin: 0 10px; 
-    width:180px;
-}
-
-.form-container mat-label {
-    width: 10%;
-    font-size: 15px;
-    text-align: center;
-}
-
-.form-container button{
-    margin-left: 10px;
-    width:180px;
-    height: 80px;
+.Price{
+    text-align: left;
+    margin-left: 250px;
+    font-size: 20px;
+    border: #5b1c0c;
 }
