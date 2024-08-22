@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ReportService {
-  private baseUrl = 'http://api.viosu.online/report_generator.php'; //  PHP bacfkend URL
+  private baseUrl = 'http://api.viosu.online/report_generator.php'; //  PHP backend URL
 
   constructor(private http: HttpClient) { }
 
