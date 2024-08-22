@@ -18,7 +18,7 @@ export interface Order {
 })
 export class OrderService {
 
-  private apiUrl = 'http://localhost/imsBA'; // Backend API URL
+  private apiUrl = 'http://localhost/ims-backend'; // Backend API URL
 
   constructor(private http: HttpClient) {}
 

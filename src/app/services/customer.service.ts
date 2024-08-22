@@ -14,4 +14,8 @@ export class CustomerService {
   getCustomers(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
   }
+
+  getCustomerCount(): Observable<{ customerCount: number }> {
+    return this.http.get<{ customerCount: number }>(`http://localhost/ims-backend/getCustomerCount.php`);
+  }
 }

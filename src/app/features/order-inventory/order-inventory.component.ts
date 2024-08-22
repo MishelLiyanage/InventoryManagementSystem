@@ -141,9 +141,6 @@ export class OrderInventoryComponent implements OnInit {
     // Update the data source to reflect the changes
     this.itemDataSource = [...this.itemDataSource];
   }
-  
-  
-  
 }
 
 interface InventoryItem {

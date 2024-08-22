@@ -11,12 +11,17 @@ export class AuthService {
   private firstname: string | null = null;
 
   private apiLoginUrl = 'http://localhost/ims-backend/login.php'; 
+  private apiCheckUsernameUrl = 'http://localhost/ims-backend/check-username.php';
 
   constructor(private http: HttpClient, @Inject(PLATFORM_ID) private platformId: any) {}
 
   login(username: string, password: string): Observable<any> {
     console.log(username + " " + password);
     return this.http.post<any>(this.apiLoginUrl, { username, password });
+  }
+
+  checkUsernameExists(username: string): Observable<boolean> {
+    return this.http.post<boolean>(this.apiCheckUsernameUrl, { username });
   }
 
   setUserId(id: number | null) {

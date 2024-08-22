@@ -8,7 +8,7 @@ import { InventoryItem } from '../features/view-inventory/view-inventory.compone
 })
 
 export class InventoryService {
-  private apiUrl = 'http://localhost/ims';
+  private apiUrl = 'http://localhost/ims-backend';
 
   constructor(private http: HttpClient) { }
 
