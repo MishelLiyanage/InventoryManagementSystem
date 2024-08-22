@@ -101,7 +101,7 @@ export class ReportsComponent implements OnInit {
       a.href = url;
       a.download = `${reportType}.csv`;
       
-      document.body.appendChild(a); // Append to DOM for Firefox support
+      document.body.appendChild(a); // Append to DOM for Firefox 
       a.click();
       console.log('Downloaded');
       
