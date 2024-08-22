@@ -1,85 +1,42 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-  background-color: #fff8dc; 
+.container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  width: 100%;
+  margin-top: 20px; 
 }
-
 
 h1 {
-  padding: 20px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-weight: 200;
   text-align: center; 
-  color: #5c4033; 
-  font-size: 40px; 
   margin-bottom: 20px;
+  margin-top: 20px; 
 }
 
-
-.demo-button-container {
-  padding: 12px;
-  text-align: left; 
-  margin-bottom: 10px; 
-}
-
-
-button {
-  background-color: #8b4513; 
-  color: white; 
-  border: none; 
-  padding: 10px 20px; 
-  font-size: 20px; 
-  border-radius: 5px; 
-  cursor: pointer; 
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
-  transition: background-color 0.3s ease, transform 0.3s ease; 
-  margin-right: 10px; 
-}
-
-button:hover {
-  background-color: #a0522d; 
-  transform: translateY(-2px); 
-}
-
-button:active {
-  background-color: #5c4033; 
-  transform: translateY(0); 
-}
-
-.table1 {
-  padding-top: 5px;
-  padding-right: 150px; 
-  padding-bottom: 150px; 
-  padding-left:150px; 
+.table-responsive {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 table {
-  border-radius: 250px;
-  width: 90%;
-  max-width: 500px; 
-  margin:10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); 
   border-collapse: collapse;
-  background-color: #f5f5dc; 
-  border: 1px solid #a0522d; 
-  border-radius: 5px; 
+  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+  background-color: hsla(33, 87%, 91%, 0.8);
+  font-family: sans-serif;
+  margin-left:85px;
+  margin-right: 85px;
 }
 
-th {
-  background-color: #8b4513; 
-  color: black; 
+thead th {
+  background-color: #d96426; 
   text-align: left;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-weight: bold;
-  border-bottom: 2px solid #a0522d; 
-  font-size: 15px;
+  padding: 10px;
+  border: none;
 }
 
-td {
-  border-bottom: 1px solid #d2b48c; 
-  background-color: #f5f5dc; 
-  color: #5c4033; 
-  font-size: 15px;
+tbody tr:hover {
+  background-color: hsla(33, 94%, 79%, 0.8);
 }

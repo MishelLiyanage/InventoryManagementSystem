@@ -6,9 +6,11 @@ export interface Products {
   id: number;
   category: string;
   quantity: number;
-  name: string;
-  date: Date;
-  manufacturer: string;
+  itemname: string;
+  priceunit: number;
+  quantityinstock: number;
+  description : string;
+  addeddate: Date;
 }
 
 @Component({
@@ -16,6 +18,8 @@ export interface Products {
   templateUrl: './update-delete-inventory.component.html',
   styleUrl: './update-delete-inventory.component.css'
 })
+
+
 export class UpdateDeleteInventoryComponent implements OnInit{
   displayedColumns: string[] = ['id', 'category', 'itemname', 'priceunit', 'quantityinstock', 'description', 'addeddate', 'actions'];
   dataSource: any[] = [];
