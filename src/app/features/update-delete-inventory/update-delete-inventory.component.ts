@@ -6,9 +6,11 @@ export interface Products {
   id: number;
   category: string;
   quantity: number;
-  name: string;
-  date: Date;
-  manufacturer: string;
+  itemname: string;
+  priceunit: number;
+  quantityinstock: number;
+  description : string;
+  addeddate: Date;
 }
 
 @Component({
@@ -16,6 +18,8 @@ export interface Products {
   templateUrl: './update-delete-inventory.component.html',
   styleUrl: './update-delete-inventory.component.css'
 })
+
+
 export class UpdateDeleteInventoryComponent implements OnInit{
   displayedColumns: string[] = ['id', 'category', 'itemname', 'priceunit', 'quantityinstock', 'description', 'addeddate', 'actions'];
   dataSource: any[] = [];
@@ -27,7 +31,7 @@ export class UpdateDeleteInventoryComponent implements OnInit{
   }
 
   loadInventory() {
-    this.http.get<Products[]>('http://localhost/imsBA/get-products.php').subscribe(data => {
+    this.http.get<Products[]>('http://localhost/ims/get-products.php').subscribe(data => {
       this.dataSource = data;
     }, error => {
       console.error('Error loading inventory data:', error);
@@ -39,7 +43,7 @@ export class UpdateDeleteInventoryComponent implements OnInit{
   }
 
   onDelete(element: Products) {
-    this.http.post('http://localhost/imsBA/delete-product.php', { id: element.id }).subscribe(() => {
+    this.http.post('http://localhost/ims/delete-product.php', { id: element.id }).subscribe(() => {
       this.loadInventory(); // Reload the inventory after deletion
     }, error => {
       console.error('Error deleting product:', error);

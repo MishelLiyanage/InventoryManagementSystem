@@ -1,102 +1,62 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-  background-color: #fff8dc;
+.container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  width: 100%;
+  margin-top: 20px; 
 }
 
 h1 {
-  padding: 20px;
-  font-family: sans-serif;
-  font-weight: bold;
-  text-align: center;
-  color: hsl(0, 0%, 10%);
-  font-size: 40px;
+  text-align: center; 
   margin-bottom: 20px;
+  margin-top: 20px; 
+  font-size: 30px;
 }
 
-
-.demo-button-container {
-  padding: 12px;
-  text-align: left;
-  margin-bottom: 10px;
-}
-
-
-button {
-  background-color: hsl(4, 69%, 18%);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 17px;
-  border-radius: 5px;
-  cursor: pointer;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  margin-right: 10px;
-}
-
-button:hover {
-  background-color: #a0522d;
-  transform: translateY(-2px);
-}
-
-button:active {
-  background-color: #5c4033;
-  transform: translateY(0);
-}
-
-.table1 {
-  /* padding: 5px 40px 50px; */
-  padding-left: 85px;
-  padding-right: 85px;
-  padding-bottom: 30px;
+.table-responsive {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 table {
-  border-radius: 5px;
-  /* width: 50%; */
-  /* max-width: 0px; */
-  margin: 0 auto;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); 
   border-collapse: collapse;
-  background-color: hsla(33, 87%, 91%, 0.8);
-  border: 1px solid hsl(4, 69%, 18%);
-  border-radius: 25px;
+  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  table-layout: fixed;
-}
-
-th {
-  background-color: #dc692f;
-  color: black;
+  background-color: hsla(33, 87%, 91%, 0.8);
   font-family: sans-serif;
-  font-weight: bold;
-  border-bottom: 2px solid #a0522d;
+  margin-left:85px;
+  margin-right: 85px;
 }
 
-/* th,
-td {
+thead th {
+  background-color: #d96426; 
+  text-align: left;
   padding: 10px;
-  border-bottom: 1px solid hsl(34, 44%, 69%, 80%);
-  text-align: center;
-  background-color: #f5f5dc;
-  color: #5c4033;
-} */
-
-/* Header Styling */
-
-
-
-td {
-  padding: 10px 15px;
-  border-bottom: 1px solid #d2b48c;
-  background-color: #f5f5dc;
-  color: #5c4033;
-  font-size: 20px;
+  border: none;
 }
 
-
-tr:hover td {
+tbody tr:hover {
   background-color: hsla(33, 94%, 79%, 0.8);
+}
+
+button {
+  margin-right: 25px;
+  background-color: hsl(12, 77%, 20%);
+  color: white; /* Set the text color to white */
+  border-radius: 15px;
+  font-size: 15px;
+  border: none; /* Optional: Removes the default button border */
+  padding: 10px 15px; /* Optional: Adjust padding for better button size */
+  color: white;
+}
+
+button:hover {
+  background-color: hsl(12, 77%, 30%);
+
+}
+button:hover{
+  background-color: hsl(12, 77%, 30%);
 }

@@ -1,62 +1,37 @@
+<div class= 'Container'> 
+
 <h1><b>UPDATE/DELETE ITEMS FROM INVENTORY</b></h1>
 
-<div class="demo-button-container"></div>
-
-<div class="table1">
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
-
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef> ID </th>
-      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-    </ng-container>
-  
-  
-    <ng-container matColumnDef="category">
-      <th mat-header-cell *matHeaderCellDef> Category </th>
-      <td mat-cell *matCellDef="let element"> {{element.category}} </td>
-    </ng-container>
-  
-   
-    <ng-container matColumnDef="itemname">
-      <th mat-header-cell *matHeaderCellDef> Item Name </th>
-      <td mat-cell *matCellDef="let element"> {{element.itemname}} </td>
-    </ng-container>
-  
-   
-    <ng-container matColumnDef="priceunit">
-      <th mat-header-cell *matHeaderCellDef> Unit Price </th>
-      <td mat-cell *matCellDef="let element"> {{element.priceunit}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="quantityinstock">
-      <th mat-header-cell *matHeaderCellDef> Quantitystock</th>
-      <td mat-cell *matCellDef="let element"> {{element.quantityinstock}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="description">
-      <th mat-header-cell *matHeaderCellDef> Description </th>
-      <td mat-cell *matCellDef="let element"> {{element.description}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="addeddate">
-      <th mat-header-cell *matHeaderCellDef> Added Date </th>
-      <td mat-cell *matCellDef="let element"> {{element.addeddate}} </td>
-    </ng-container>
-
-    <!-- Actions Column (Update/Delete) -->
-    <ng-container matColumnDef="actions">
-      <th mat-header-cell *matHeaderCellDef> Actions </th>
-      <td mat-cell *matCellDef="let element">
-        <button mat-button (click)="onUpdate(element)">Update</button>
-        <button mat-button color="warn" (click)="onDelete(element)">Delete</button>
-      </td>
-    </ng-container>
-  
-    <!-- Header and Row Definitions -->
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-
+<div class="table-responsive">
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Category</th>
+        <th>Item Name</th>
+        <th>Unit Price</th>
+        <th>Quantity in Stock</th>
+        <th>Description</th>
+        <th>Added Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+     
+      <tr *ngFor="let element of dataSource">
+        <td>{{ element.id }}</td>
+        <td>{{ element.category }}</td>
+        <td>{{ element.itemname }}</td>
+        <td>{{ element.priceunit }}</td>
+        <td>{{ element.quantityinstock }}</td>
+        <td>{{ element.description }}</td>
+        <td>{{ element.addeddate | date }}</td>
+        <td>
+          <button class="primary" (click)="onUpdate(element)">Update</button>
+          <button class="danger" (click)="onDelete(element)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
   </table>
 </div>
-
+</div>

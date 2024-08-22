@@ -26,53 +26,32 @@
     <button class="search-button" (click)="onSearch()">Search</button>
 </div>
 
-<div class = "table1">
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-    
-      
-        <!-- Position Column -->
-        <ng-container matColumnDef="id">
-          <th mat-header-cell *matHeaderCellDef> ID </th>
-          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-        </ng-container>
-      
-        <!-- Name Column -->
-        <ng-container matColumnDef="category">
-          <th mat-header-cell *matHeaderCellDef> Category </th>
-          <td mat-cell *matCellDef="let element"> {{element.category}} </td>
-        </ng-container>
-      
-        <!-- Weight Column -->
-        <ng-container matColumnDef="itemname">
-          <th mat-header-cell *matHeaderCellDef> Item Name </th>
-          <td mat-cell *matCellDef="let element"> {{element.itemname}} </td>
-        </ng-container>
-      
-        <!-- Symbol Column -->
-        <ng-container matColumnDef="priceunit">
-          <th mat-header-cell *matHeaderCellDef> Unit Price </th>
-          <td mat-cell *matCellDef="let element"> {{element.priceunit}} </td>
-        </ng-container>
+<div class="table-responsive">
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Category</th>
+        <th>Item Name</th>
+        <th>Unit Price</th>
+        <th>Quantity in Stock</th>
+        <th>Description</th>
+        <th>Added Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let element of dataSource">
+        <td>{{ element.id }}</td>
+        <td>{{ element.category }}</td>
+        <td>{{ element.itemname }}</td>
+        <td>{{ element.priceunit }}</td>
+        <td>{{ element.quantityinstock }}</td>
+        <td>{{ element.description }}</td>
+        <td>{{ element.addeddate | date }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-        <ng-container matColumnDef="quantityinstock">
-          <th mat-header-cell *matHeaderCellDef> Quantity In Stock </th>
-          <td mat-cell *matCellDef="let element"> {{element.quantityinstock}} </td>
-        </ng-container>
-      
-        <ng-container matColumnDef="description">
-          <th mat-header-cell *matHeaderCellDef> Description</th>
-          <td mat-cell *matCellDef="let element"> {{element.description}} </td>
-        </ng-container>
-
-        <ng-container matColumnDef="addeddate">
-          <th mat-header-cell *matHeaderCellDef> Add Date </th>
-          <td mat-cell *matCellDef="let element"> {{element.addeddate}} </td>
-        </ng-container>
-      
-      
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-      </table>
-    </div>
 
 
