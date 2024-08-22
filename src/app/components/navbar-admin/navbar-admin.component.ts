@@ -9,6 +9,10 @@ import { Router } from '@angular/router';
 export class NavbarAdminComponent {
   constructor(private router: Router){}
 
+  navigateToDashboard(){
+    this.router.navigate(['/dashboard/admin-dashboard']);
+  }
+
   navigateToAddInventory(){
     this.router.navigate(['/feature/add-inventory']);
   }
