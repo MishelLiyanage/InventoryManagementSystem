@@ -26,7 +26,7 @@ export class SearchFilterInventoryComponent implements OnInit {
       .set('searchQuery', this.searchQuery.trim())
       .set('category', this.selectedCategory);
 
-    this.http.get<any[]>('http://localhost/imsBA/search.php', { params })
+    this.http.get<any[]>('http://localhost/ims-backend/search.php', { params })
       .subscribe(data => {
         this.dataSource = data;
       });

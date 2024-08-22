@@ -33,7 +33,9 @@
       <div *ngIf="passwordError" class="error">{{ passwordError }}</div>
     </div>
 
-    <button class="btn" type="submit">Log In</button>
+    <div *ngIf="loginError" class="error">{{ loginError }}</div>
+
+    <button class="btn" type="submit"  [disabled]="isLocked">Log In</button>
 
     <div class="signup">
       <label>Don't have an account? </label>

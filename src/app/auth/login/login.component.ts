@@ -14,6 +14,13 @@ export class LoginComponent {
   password: string = '';
   usernameError: string = '';
   passwordError: string = '';
+  loginError: string = '';
+
+  failedAttempts: number = 0;
+  maxFailedAttempts: number = 3;
+  lockoutTime: number = 10000; // 30 seconds lockout period
+  isLocked: boolean = false;
+  lockoutTimer: any;
 
   constructor(
     private authService: AuthService,
@@ -30,6 +37,7 @@ export class LoginComponent {
     // Reset error messages
     this.usernameError = '';
     this.passwordError = '';
+    this.loginError = '';
 
     // Username validation
     if (!this.username) {
@@ -53,6 +61,11 @@ export class LoginComponent {
   }
 
   login() {
+    if (this.isLocked) {
+      this.loginError = 'Account is locked due to multiple failed login attempts. Please try again later.';
+      return;
+    }
+
     // Run validations first
     if (!this.validateForm()) {
       return;
@@ -67,6 +80,9 @@ export class LoginComponent {
         this.authService.setUserId(id);
         this.authService.setfirstname(firstname);
 
+        // Reset failed attempts on successful login
+        this.failedAttempts = 0;
+
          // Redirect based on the role
         if (role === 'admin') {
           console.log('I am the admin');
@@ -76,9 +92,25 @@ export class LoginComponent {
           this.router.navigate(['/dashboard/customer-dashboard'])
         }
       } else {
-        alert(response.message); // Handle invalid login
+        this.handleFailedLogin(response.message);
       }
     });
+  }
+
+  handleFailedLogin(errorMessage: string) {
+    this.failedAttempts++;
+    this.loginError = errorMessage;
+
+    if (this.failedAttempts >= this.maxFailedAttempts) {
+      this.isLocked = true;
+      this.loginError = 'Too many failed attempts. Account is locked. Please try again in 30 seconds.';
+      
+      // Start lockout timer
+      this.lockoutTimer = setTimeout(() => {
+        this.isLocked = false;
+        this.failedAttempts = 0;
+      }, this.lockoutTime);
+    }
   }
 
   navigateToSignUp(){

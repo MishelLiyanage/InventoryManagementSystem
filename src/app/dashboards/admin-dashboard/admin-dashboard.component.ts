@@ -9,6 +9,7 @@ import { CustomerService } from '../../services/customer.service';
   styleUrl: './admin-dashboard.component.css'
 })
 export class AdminDashboardComponent {
+  customerCount: number = 0;
   customers: any[] = [];
 
   constructor(private layoutConfigService:LayoutConfigService, private customerService: CustomerService){}
@@ -20,6 +21,11 @@ export class AdminDashboardComponent {
 
     this.customerService.getCustomers().subscribe((data) => {
       this.customers = data;
+    });
+
+    this.customerService.getCustomerCount().subscribe((data) => {
+      this.customerCount = data.customerCount;
+      console.log(this.customerCount);
     });
   }  
 
