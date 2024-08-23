@@ -23,15 +23,15 @@ export class OrderService {
   constructor(private http: HttpClient) {}
 
   getCakeIngredients(): Observable<InventoryItem[]> {
-    return this.http.get<InventoryItem[]>(`${this.apiUrl}/inventory.php?category=Cake Ingredients`);
+    return this.http.get<InventoryItem[]>(`${this.apiUrl}/getinventorybycategory.php?category=Cake Ingredients`);
   }
 
   getCakeTools(): Observable<InventoryItem[]> {
-    return this.http.get<InventoryItem[]>(`${this.apiUrl}/inventory.php?category=Cake Tools`);
+    return this.http.get<InventoryItem[]>(`${this.apiUrl}/getinventorybycategory.php?category=Cake Tools`);
   }
 
   getPartyItems(): Observable<InventoryItem[]> {
-    return this.http.get<InventoryItem[]>(`${this.apiUrl}/inventory.php?category=party items`);
+    return this.http.get<InventoryItem[]>(`${this.apiUrl}/getinventorybycategory.php?category=party items`);
   }
 
 
@@ -46,4 +46,6 @@ export class OrderService {
   getOrderCount(): Observable<{ orderCount: number }> {
     return this.http.get<{ orderCount: number }>(`${this.apiUrl}/getOrdersCount.php`);
   }
+
+  
 }

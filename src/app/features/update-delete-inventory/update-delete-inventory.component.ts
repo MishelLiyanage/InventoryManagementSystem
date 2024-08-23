@@ -1,17 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+import { InventoryService } from '../../services/inventory.service';
 
-export interface Products {
-  id: number;
-  category: string;
-  quantity: number;
-  itemname: string;
-  priceunit: number;
-  quantityinstock: number;
-  description : string;
-  addeddate: Date;
-}
 
 @Component({
   selector: 'app-update-delete-inventory',
@@ -24,26 +14,26 @@ export class UpdateDeleteInventoryComponent implements OnInit{
   displayedColumns: string[] = ['id', 'category', 'itemname', 'priceunit', 'quantityinstock', 'description', 'addeddate', 'actions'];
   dataSource: any[] = [];
 
-  constructor(private router: Router, private http: HttpClient) {}
+  constructor(private router: Router, private inventoryService: InventoryService) {}
 
   ngOnInit(): void {
     this.loadInventory();
   }
 
   loadInventory() {
-    this.http.get<Products[]>('http://localhost/ims-backend/get-products.php').subscribe(data => {
+    this.inventoryService.getInventory().subscribe(data => {
       this.dataSource = data;
     }, error => {
       console.error('Error loading inventory data:', error);
     });
   }
 
-  onUpdate(element: Products) {
+  onUpdate(element: any) {
     this.router.navigate(['/feature/update-form', element.id]);
   }
 
-  onDelete(element: Products) {
-    this.http.post('http://localhost/ims-backend/delete-product.php', { id: element.id }).subscribe(() => {
+  onDelete(element: any) {
+    this.inventoryService.deleteProduct(element.id).subscribe(() => {
       this.loadInventory(); // Reload the inventory after deletion
     }, error => {
       console.error('Error deleting product:', error);

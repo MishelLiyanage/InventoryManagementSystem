@@ -24,4 +24,18 @@ export class InventoryService {
   getProductCount(): Observable<{ productCount: number }> {
     return this.http.get<{ productCount: number }>(`${this.apiUrl}/getProductCount.php`);
   }
+
+  getProductById(id: string): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/updateform.php?id=${id}`);
+  }
+
+  // New method to update a product
+  updateProduct(productData: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/update-product.php`, productData);
+  }
+
+  // Method to delete a product
+  deleteProduct(productId: number): Observable<any> {
+    return this.http.post(`${this.apiUrl}/delete-product.php`, { id: productId });
+  }
 }
