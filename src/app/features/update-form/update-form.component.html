@@ -4,54 +4,67 @@
 
 
 <div class="container-fluid">
-  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" novalidate>
 
     <label>Category</label>
     <div class="mb-3">
-      
-
       <div class="form-check">
-        <input type="radio" class="form-check-input" name="Category" [(ngModel)]="product.category" value="Cake Ingredients">
+        <input type="radio" class="form-check-input" name="Category" [(ngModel)]="product.category" value="Cake Ingredients" required>
         <label class="form-check-label">Cake Ingredients</label>
       </div>
 
       <div class="form-check">
-        <input type="radio" class="form-check-input" name="Category" [(ngModel)]="product.category" value="Cake Tools">
+        <input type="radio" class="form-check-input" name="Category" [(ngModel)]="product.category" value="Cake Tools" required>
         <label class="form-check-label">Cake Tools</label>
       </div>
 
       <div class="form-check">
-        <input type="radio" class="form-check-input" name="Category" [(ngModel)]="product.category" value="Party Items">
+        <input type="radio" class="form-check-input" name="Category" [(ngModel)]="product.category" value="Party Items" required>
         <label class="form-check-label">Party Items</label>
+      </div>
+      <div *ngIf="userForm.controls['Category']?.invalid && userForm.controls['Category']?.touched" class="text-danger">
+        Category is required.
       </div>
     </div>
 
     <div class="form-group">
       <label>Item Name</label>
-      <input type="text" class="form-control" name="itemname" [(ngModel)]="product.itemname">
+      <input type="text" class="form-control" name="itemname" [(ngModel)]="product.itemname" required #itemname="ngModel">
+      <div *ngIf="itemname.invalid && itemname.touched" class="text-danger">
+        Item Name is required.
+      </div>
     </div>
 
     <div class="form-group">
       <label>Unit Price</label>
-      <input type="number" name="priceunit" class="form-control" min='0' [(ngModel)]="product.priceunit">
+      <input type="number" name="priceunit" class="form-control" min="0" [(ngModel)]="product.priceunit" required #priceunit="ngModel">
+      <div *ngIf="priceunit.invalid && priceunit.touched" class="text-danger">
+        Valid Unit Price is required.
+      </div>
     </div>
 
     <div class="form-group">
       <label>Quantity In Stock</label>
-      <input type="number" name="quantityinstock" class="form-control" min='0'  [(ngModel)]="product.quantityinstock">
+      <input type="number" name="quantityinstock" class="form-control" min="0" [(ngModel)]="product.quantityinstock" required #quantityinstock="ngModel">
+      <div *ngIf="quantityinstock.invalid && quantityinstock.touched" class="text-danger">
+        Valid Quantity In Stock is required.
+      </div>
     </div>
 
     <div class="form-group">
       <label>Description</label>
-      <input type="text" name="description" class="form-control" [(ngModel)]="product.description">
+      <input type="text" name="description" class="form-control" [(ngModel)]="product.description" #description="ngModel">
     </div>
 
     <div class="form-group">
-      <label>Added date</label>
-      <input type="date" name="addeddate" class="form-control" [(ngModel)]="product.addeddate">
+      <label>Added Date</label>
+      <input type="date" name="addeddate" class="form-control" [(ngModel)]="product.addeddate" required #addeddate="ngModel">
+      <div *ngIf="addeddate.invalid && addeddate.touched" class="text-danger">
+        Added Date is required.
+      </div>
     </div>
 
-    <button class="btn btn-primary" type="submit">Update Item</button>
+    <button class="btn btn-primary" type="submit" [disabled]="userForm.invalid">Update Item</button>
     <button class="btn btn-secondary" type="button" (click)="onCancel()">Cancel</button>
   </form>
 </div>
