@@ -1,4 +1,4 @@
-.registration-container {
+/* .registration-container {
     background-image: url('../../../assets/login-background.png');
     background-size: cover;
     background-position: center;
@@ -6,22 +6,40 @@
     filter: blur(3px);
     height: 795px;
     width: 100%;
+} */
+
+.left-container img{
+    width: 560px;
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.container{
+    width: 500px;
+}
+
+.content{
+    margin-left: 50px;
 }
 
 .form-container {
-    background-color: #efe8e4;
-    padding: 25px;
-    border-radius: 15px;
+    background-color: white;
+    border-radius: 25px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    width: 25%;
     position: absolute;
-    margin-top: 30px;
+    margin-top: 0px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    width: 30%;
-
+    width: 1150px;
+    height: max-content;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .topic-signup{
@@ -29,23 +47,31 @@
 }
 
 .topic-signup h1 {
-    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 17px;
     color: hsl(4, 69%, 18%);
     font-weight: bold;
-    font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-family: sans-serif;
 }
 
-.topic-signup h4{
+.topic-signup h3 {
     color: hsl(4, 69%, 18%);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-family: sans-serif;
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+.name{
+    display: flex;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
     margin-bottom: 8px;
+    margin-right: 10px;
+    /* width: 250px; */
 }
 
 .form-group label {
@@ -56,14 +82,27 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.form-group input {
+    margin-right: 20px;
+}
+
 .form-control {
     border: 1px solid #a5673f;
     border-radius: 10px;
-    padding: 10px;
     color: #4c331a;
     font-size: 15px;
-    width: 100%;
-    height: 30px;
+    width: 470px;
+    height: 32px;
+    box-sizing: border-box;
+}
+
+.form-control1 {
+    border: 1px solid #a5673f;
+    border-radius: 10px;
+    color: #4c331a;
+    font-size: 15px;
+    width: 220px;
+    height: 32px;
     box-sizing: border-box;
 }
 
@@ -71,12 +110,12 @@
     background-color: hsl(12, 77%, 20%);
     border: none;
     color: white;
-    font-size: 18px;
+    font-size: 15px;
     cursor: pointer;
     border-radius: 10px;
     display: block;
-    width: 100%;
-    height: 40px;
+    width: 470px;
+    height: 32px;
     margin-top: 20px;
 }
 

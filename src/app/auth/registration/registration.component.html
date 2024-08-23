@@ -1,109 +1,133 @@
-<div class="registration-container"></div>
-<div class="form-container" appearance="outlined">
-  <div class="topic-signup">
-    <h1>Sign Up</h1>
-    <h4>Create your account</h4>
+<div>
+  <div class="registration-container"></div>
+  <div class="form-container" appearance="outlined">
+    <div class="left-container">
+      <img src="../../../assets/loginbackground2.png" alt="" />
+    </div>
+    <div class="content">
+      <div class="topic-signup">
+        <h1>Sign Up</h1>
+        <h3>Create your account</h3>
+      </div>
+
+      <hr />
+
+      <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+        <div class="name">
+          <div class="form-group">
+            <label for="firstname">First name: </label>
+            <input
+              type="text"
+              class="form-control1"
+              required
+              placeholder="Ex:- Mishel"
+              [(ngModel)]="userModel.firstname"
+              name="firstname"
+            />
+            <div *ngIf="validationErrors.firstname" class="error">
+              {{ validationErrors.firstname }}
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="lastname">Last name: </label>
+            <input
+              type="text"
+              class="form-control1"
+              required
+              placeholder="Ex:- Fernando"
+              [(ngModel)]="userModel.lastname"
+              name="lastname"
+            />
+            <div *ngIf="validationErrors.lastname" class="error">
+              {{ validationErrors.lastname }}
+            </div>
+          </div>
+  
+        </div>
+        
+        <div class="form-group">
+          <label for="email">E-mail: </label>
+          <input
+            type="text"
+            class="form-control"
+            required
+            placeholder="Ex:- mishel@gmail.com"
+            [(ngModel)]="userModel.email"
+            name="email"
+          />
+          <div *ngIf="validationErrors.email" class="error">
+            {{ validationErrors.email }}
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="">Username: </label>
+          <input
+            type="text"
+            class="form-control"
+            required
+            placeholder="Ex:- Mish123"
+            [(ngModel)]="userModel.username"
+            name="username"
+          />
+          <div *ngIf="validationErrors.username" class="error">
+            {{ validationErrors.username }}
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="">Password: </label>
+          <input
+            type="password"
+            class="form-control"
+            required
+            placeholder="Ex:- 123456"
+            [(ngModel)]="userModel.password"
+            name="password"
+          />
+          <div *ngIf="validationErrors.password" class="error">
+            {{ validationErrors.password }}
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="">City: </label>
+          <input
+            type="text"
+            class="form-control"
+            required
+            placeholder="Ex:- Negombo"
+            [(ngModel)]="userModel.city"
+            name="city"
+          />
+          <div *ngIf="validationErrors.city" class="error">
+            {{ validationErrors.city }}
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="">Contact No: </label>
+          <input
+            type="text"
+            class="form-control"
+            required
+            placeholder="Ex:- 0712345678"
+            [(ngModel)]="userModel.telno"
+            name="telno"
+          />
+          <div *ngIf="validationErrors.telno" class="error">
+            {{ validationErrors.telno }}
+          </div>
+        </div>
+
+        <button class="btn" type="submit">Sign Up</button>
+
+        <div class="signup">
+          <label>Already have an account? </label>
+          <button class="btn-signup" (click)="navigateToLogin()">Log In</button>
+        </div>
+      </form>
+    </div>
   </div>
-
-  <hr />
-
-  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
-    <div class="form-group">
-      <label for="firstname">First name: </label>
-      <input
-        type="text"
-        class="form-control"
-        required
-        placeholder="Ex:- Mishel"
-        [(ngModel)]="userModel.firstname"
-        name="firstname"
-      />
-      <div *ngIf="validationErrors.firstname" class="error">{{ validationErrors.firstname }}</div>
-    </div>
-
-    <div class="form-group">
-        <label for="lastname">Last name: </label>
-        <input
-          type="text"
-          class="form-control"
-          required
-          placeholder="Ex:- Fernando"
-          [(ngModel)]="userModel.lastname"
-          name="lastname"
-        />
-        <div *ngIf="validationErrors.lastname" class="error">{{ validationErrors.lastname }}</div>
-      </div>
-
-      <div class="form-group">
-        <label for="email">E-mail: </label>
-        <input
-          type="text"
-          class="form-control"
-          required
-          placeholder="Ex:- mishel@gmail.com"
-          [(ngModel)]="userModel.email"
-          name="email"
-        />
-        <div *ngIf="validationErrors.email" class="error">{{ validationErrors.email }}</div>
-      </div>
-
-      <div class="form-group">
-        <label for="">Username: </label>
-        <input
-          type="text"
-          class="form-control"
-          required
-          placeholder="Ex:- Mish123"
-          [(ngModel)]="userModel.username"
-          name="username"
-        />
-        <div *ngIf="validationErrors.username" class="error">{{ validationErrors.username }}</div>
-      </div>
-
-    <div class="form-group">
-      <label for="">Password: </label>
-      <input
-        type="password"
-        class="form-control"
-        required
-        placeholder="Ex:- 123456"
-        [(ngModel)]="userModel.password"
-        name="password"
-      />
-      <div *ngIf="validationErrors.password" class="error">{{ validationErrors.password }}</div>
-    </div>
-
-    <div class="form-group">
-      <label for="">City: </label>
-      <input
-        type="text"
-        class="form-control"
-        required
-        placeholder="Ex:- Negombo"
-        [(ngModel)]="userModel.city"
-        name="city"
-      />
-      <div *ngIf="validationErrors.city" class="error">{{ validationErrors.city }}</div>
-    </div>
-
-    <div class="form-group">
-      <label for="">Contact No: </label>
-      <input
-        type="text"
-        class="form-control"
-        required
-        placeholder="Ex:- 0712345678"
-        [(ngModel)]="userModel.telno"
-        name="telno"
-      />
-      <div *ngIf="validationErrors.telno" class="error">{{ validationErrors.telno }}</div>
-    </div>
-
-    <button class="btn" type="submit">Sign Up</button>
-
-    <div class="signup">
-      <label>Already have an account? </label>
-      <button class="btn-signup" (click)="navigateToLogin()">Log In</button>
-    </div>
-  </form>
 </div>
