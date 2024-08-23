@@ -38,4 +38,13 @@ export class InventoryService {
   deleteProduct(productId: number): Observable<any> {
     return this.http.post(`${this.apiUrl}/delete-product.php`, { id: productId });
   }
+
+  checkItemDuplicate(category: string, itemName: string): Observable<{ exists: boolean }> {
+    // Construct the query parameters
+    const params = { category, itemName };
+
+    // Make the GET request to your PHP API
+    return this.http.get<{ exists: boolean }>(`${this.apiUrl}/check-duplicate.php`, { params });
+  }
+
 }

@@ -1,47 +1,79 @@
 <div class="headding">
     <h1><b>ADD NEW ITEM TO THE INVENTORY</b></h1>
-</div>
-
-<div class="container-fluid">
+  </div>
+  
+  <div class="container-fluid">
     <form #userForm="ngForm" (ngSubmit)="addItem(userForm)">
-        <label>Category</label>
-        <div class="mb-3">
-            <div class="form-check">
-                <input type="radio" class="form-check-input" name="Category" value="Cake Ingredients" ngModel required>
-                <label class="form-check-label">Cake Ingredients</label>
-            </div>
-
-            <div class="form-check">
-                <input type="radio" class="form-check-input" name="Category" value="Cake Tools" ngModel required>
-                <label class="form-check-label">Cake Tools</label>
-            </div>
-
-            <div class="form-check">
-                <input type="radio" class="form-check-input" name="Category" value="Party Items" ngModel required>
-                <label class="form-check-label">Party Items</label>
-            </div>
+      <label>Category</label>
+      <div class="mb-3">
+        <div class="form-check">
+          <input
+            type="radio"
+            class="form-check-input"
+            name="Category"
+            value="Cake Ingredients"
+            ngModel
+            required
+          />
+          <label class="form-check-label">Cake Ingredients</label>
         </div>
-
-        <div class="form-group">
-            <label>Item Name</label>
-            <input type="text" class="form-control" name="ItemName" ngModel required>
+  
+        <div class="form-check">
+          <input
+            type="radio"
+            class="form-check-input"
+            name="Category"
+            value="Cake Tools"
+            ngModel
+            required
+          />
+          <label class="form-check-label">Cake Tools</label>
         </div>
-
-        <div class="form-group">
-            <label>Price Of Unit</label>
-            <input type="number" name="unitprice" class="form-control" min="0" ngModel required>
+  
+        <div class="form-check">
+          <input
+            type="radio"
+            class="form-check-input"
+            name="Category"
+            value="Party Items"
+            ngModel
+            required
+          />
+          <label class="form-check-label">Party Items</label>
         </div>
-
-        <div class="form-group">
-            <label>Quantity In Stock</label>
-            <input type="number" name="Quantity" class="form-control"  min="0" ngModel required>
-        </div>
-
-        <div class="form-group">
-            <label>Description</label>
-            <input type="text" class="form-control" name="Description" ngModel>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Add Item</button>
+        <div *ngIf="validationErrors.category" class="text-danger">{{ validationErrors.category }}</div>
+      </div>
+  
+      <div class="form-group">
+        <label>Item Name</label>
+        <input
+          type="text"
+          class="form-control"
+          name="ItemName"
+          ngModel
+          required
+        />
+        <div *ngIf="validationErrors.itemName" class="text-danger">{{ validationErrors.itemName }}</div>
+      </div>
+  
+      <div class="form-group">
+        <label>Price Of Unit</label>
+        <input type="number" name="unitprice" class="form-control"  min = '0'  ngModel required />
+        <div *ngIf="validationErrors.unitPrice" class="text-danger">{{ validationErrors.unitPrice }}</div>
+      </div>
+  
+      <div class="form-group">
+        <label>Quantity</label>
+        <input type="number" name="Quantity" class="form-control" min = '1' ngModel required />
+        <div *ngIf="validationErrors.quantity" class="text-danger">{{ validationErrors.quantity }}</div>
+      </div>
+  
+      <div class="form-group">
+        <label>Description</label>
+        <input type="text" class="form-control" name="Description" ngModel />
+        <div *ngIf="validationErrors.description" class="text-danger">{{ validationErrors.description }}</div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Add Item</button>
     </form>
-</div>
+  </div>
