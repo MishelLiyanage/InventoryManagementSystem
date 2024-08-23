@@ -6,13 +6,16 @@ import { InventoryService } from '../../services/inventory.service';
 @Component({
   selector: 'app-update-form',
   templateUrl: './update-form.component.html',
-  styleUrl: './update-form.component.css'
+  styleUrls: ['./update-form.component.css']
 })
 export class UpdateFormComponent {
-
   product: any = {};
 
-  constructor(private route: ActivatedRoute,  private router: Router,private inventoryService: InventoryService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private inventoryService: InventoryService
+  ) {}
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
@@ -24,9 +27,14 @@ export class UpdateFormComponent {
   }
 
   onSubmit(form: NgForm) {
-    this.inventoryService.updateProduct(this.product).subscribe(() => {
-      this.router.navigate(['/feature/update-inventory']);
-    });
+    if (form.valid) {
+      this.inventoryService.updateProduct(this.product).subscribe(() => {
+        this.router.navigate(['/feature/update-inventory']);
+      });
+    } else {
+      // Handle the case where the form is invalid
+      console.log('Form is invalid');
+    }
   }
 
   onCancel() {
