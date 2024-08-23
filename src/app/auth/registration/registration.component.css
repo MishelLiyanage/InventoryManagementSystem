@@ -1,4 +1,4 @@
-/* .registration-container {
+.registration-container {
     background-image: url('../../../assets/login-background.png');
     background-size: cover;
     background-position: center;
@@ -6,7 +6,7 @@
     filter: blur(3px);
     height: 795px;
     width: 100%;
-} */
+}
 
 .left-container img{
     width: 560px;
