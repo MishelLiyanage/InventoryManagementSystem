@@ -1,45 +1,54 @@
-<div class="registration-container"></div>
-<div class="form-container" appearance="outlined">
-  <div class="topic-signup">
-    <h1>Welcome</h1>
-    <h3>Log in to your account</h3>
+<div>
+  <div class="registration-container"></div>
+  <div class="form-container" appearance="outlined">
+    <div class="left-container">
+      <img src="../../../assets/loginbackground2.png" alt="">
+    </div>
+    <div class="content">
+      <div class="topic-signup">
+        <h1>Welcome</h1>
+        <h3>Log in to your account</h3>
+      </div>
+
+      <!-- {{ userForm.value | json }} -->
+      <hr />
+      <!-- {{ userModel | json }} -->
+      <form (ngSubmit)="login()">
+        <div class="form-group">
+          <label for="">Username: </label>
+          <input
+            type="text"
+            class="form-control"
+            required
+            [(ngModel)]="username"
+            name="username"
+          />
+          <div *ngIf="usernameError" class="error">{{ usernameError }}</div>
+        </div>
+
+        <div class="form-group">
+          <label for="">Password: </label>
+          <input
+            type="password"
+            class="form-control"
+            required
+            [(ngModel)]="password"
+            name="password"
+          />
+          <div *ngIf="passwordError" class="error">{{ passwordError }}</div>
+        </div>
+
+        <div *ngIf="loginError" class="error">{{ loginError }}</div>
+
+        <button class="btn" type="submit" [disabled]="isLocked">Log In</button>
+
+        <div class="signup">
+          <label>Don't have an account? </label>
+          <button class="btn-signup" (click)="navigateToSignUp()">
+            Sign Up
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
-
-  <!-- {{ userForm.value | json }} -->
-  <hr />
-  <!-- {{ userModel | json }} -->
-  <form (ngSubmit)="login()">
-    <div class="form-group">
-      <label for="">Username: </label>
-      <input
-        type="text"
-        class="form-control"
-        required
-        [(ngModel)]="username"
-        name="username"
-      />
-      <div *ngIf="usernameError" class="error">{{ usernameError }}</div>
-    </div>
-
-    <div class="form-group">
-      <label for="">Password: </label>
-      <input
-        type="password"
-        class="form-control"
-        required
-        [(ngModel)]="password"
-        name="password"
-      />
-      <div *ngIf="passwordError" class="error">{{ passwordError }}</div>
-    </div>
-
-    <div *ngIf="loginError" class="error">{{ loginError }}</div>
-
-    <button class="btn" type="submit"  [disabled]="isLocked">Log In</button>
-
-    <div class="signup">
-      <label>Don't have an account? </label>
-      <button class="btn-signup" (click)="navigateToSignUp()">Sign Up</button>
-    </div>
-  </form>
 </div>
