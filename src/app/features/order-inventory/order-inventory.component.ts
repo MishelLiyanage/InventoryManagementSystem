@@ -131,7 +131,7 @@ export class OrderInventoryComponent implements OnInit {
       } else {
 
         //call validateOrderFormDetails method
-        if (await this.validateOrderFormDetails(this.selectedTool.itemname, this.ingredientQuantity)) {
+        if (await this.validateOrderFormDetails(this.selectedTool.itemname, this.toolQuantity)) {
 
           this.itemDataSource = [...this.itemDataSource, { name: this.selectedTool.itemname, quantity: this.toolQuantity, price: this.selectedTool.priceunit * this.toolQuantity }];
         }
@@ -163,7 +163,7 @@ export class OrderInventoryComponent implements OnInit {
       } else {
 
         //call validateOrderFormDetails method
-        if (await this.validateOrderFormDetails(this.selectedPartyItem.itemname, this.ingredientQuantity)) {
+        if (await this.validateOrderFormDetails(this.selectedPartyItem.itemname, this.partyItemQuantity)) {
 
           this.itemDataSource = [...this.itemDataSource, { name: this.selectedPartyItem.itemname, quantity: this.partyItemQuantity, price: this.selectedPartyItem.priceunit * this.partyItemQuantity }];
         }
