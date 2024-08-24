@@ -65,7 +65,7 @@
         <tr>
           <th>Name</th>
           <th>Quantity</th>
-          <th>Price</th>
+          <th>Price (Rs.)</th>
           <th>Action</th>
         </tr>
       </thead>
@@ -73,7 +73,7 @@
         <tr *ngFor="let element of itemDataSource; let i = index">
           <td>{{ element.name }}</td>
           <td>{{ element.quantity }}</td>
-          <td>${{ element.price }}</td>
+          <td>{{ element.price }}</td>
           <td>
             <button (click)="removeItem(i)">Remove</button>
           </td>
@@ -87,5 +87,5 @@
 </div>
 
 <div class='Price'>
-  <label>Total Price : {{ calculateTotalPrice() | currency }}</label>
+  <label>Total Price : {{ calculateTotalPrice() }}</label>
 </div>
