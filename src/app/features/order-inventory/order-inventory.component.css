@@ -3,24 +3,26 @@ h1 {
     font-weight: bold;
     text-align: center;
     color: #5b1c0c;
-margin-top: 25px; }
+    margin-top: 25px;
+}
 
 .inventory-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px ;
+    margin: 20px;
     border: #5b1c0c;
 }
 
-.form-container, .table-container {
+.form-container,
+.table-container {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     background-color: hsla(33, 87%, 91%, 0.9);
     padding: 25px;
     margin: 10px;
     width: 100%;
-    
+
 }
 
 .table-responsive {
@@ -34,45 +36,51 @@ table {
     border-collapse: collapse;
     border-radius: 12px;
     overflow: hidden;
-    background-color: hsla(33, 87%, 91%, 0.9); /* Slightly increased opacity */
+    background-color: hsla(33, 87%, 91%, 0.9);
+    /* Slightly increased opacity */
     font-family: sans-serif;
     width: 100%;
 }
 
 thead th {
-    background-color: #d96426; 
+    background-color: #d96426;
     text-align: left;
     padding: 12px;
     border: none;
     font-size: 12px;
-    color: white; /* White text for better contrast */
+    color: white;
+    /* White text for better contrast */
 }
 
 tbody tr:hover {
-    background-color: hsla(33, 94%, 79%, 0.9); /* Slightly increased opacity */
+    background-color: hsla(33, 94%, 79%, 0.9);
+    /* Slightly increased opacity */
 }
 
 h5 {
     font-size: 15px;
     margin-bottom: 15px;
-    color: #5b1c0c; /* Dark brown color */
+    color: #5b1c0c;
+    /* Dark brown color */
 }
 
-.tools-section, .Items-section, .Ingredients-section {
+.tools-section,
+.Items-section,
+.Ingredients-section {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-bottom: 20px;
-    
+
 }
 
 .tools-section button,
 .Items-section button,
-.Ingredients-section button{
-    flex: 1; 
+.Ingredients-section button {
+    flex: 1;
     font-size: 12px;
     height: 40px;
-    width: 100%; 
+    width: 100%;
     padding: 8px;
 }
 
@@ -86,13 +94,13 @@ h5 {
 .Ingredients-section select,
 .Ingredients-section input,
 .Ingredients-section label {
-    flex: 1;  
+    flex: 1;
     height: 40px;
-    width: 100%; 
+    width: 100%;
     padding: 8px;
     border-radius: 8px;
-   
-   
+
+
 }
 
 button {
@@ -100,20 +108,28 @@ button {
     background-color: hsl(12, 77%, 20%);
     color: white;
     border-radius: 8px;
-    padding: 10px 20px; 
+    padding: 10px 20px;
     font-size: 12px;
     font-weight: bold;
     height: 50px;
-    width: 100%; 
+    width: 100%;
     padding: 8px;
-    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    transition: background-color 0.3s ease;
+    /* Smooth transition on hover */
 }
 
 button:hover {
-    background-color: hsl(12, 77%, 30%); /* Slightly lighter on hover */
+    background-color: hsl(12, 77%, 30%);
+    /* Slightly lighter on hover */
 }
 
-.Price{
+button:disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
+    background-color: hsl(12, 77%, 10%);
+}
+
+.Price {
     text-align: left;
     margin-left: 250px;
     font-size: 20px;

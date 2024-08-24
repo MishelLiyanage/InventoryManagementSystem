@@ -18,7 +18,7 @@ export interface OrderItem {
 export class OrderInventoryComponent implements OnInit {
 
   userid: number | null = 0;
-  displayedColumns: string[] = ['name', 'quantity', 'price','action'];
+  displayedColumns: string[] = ['name', 'quantity', 'price', 'action'];
   itemDataSource: OrderItem[] = [];
 
   selectedIngredient: InventoryItem | null = null;
@@ -30,14 +30,16 @@ export class OrderInventoryComponent implements OnInit {
   selectedPartyItem: InventoryItem | null = null;
   partyItemQuantity: number = 0;
 
+  quantity: number = 0;
+
   cakeIngredients: InventoryItem[] = [];
   cakeTools: InventoryItem[] = [];
   partyItems: InventoryItem[] = [];
 
   constructor(
-    private OrderService: OrderService, 
+    private OrderService: OrderService,
     // private http: HttpClient, 
-    private authService: AuthService) {} 
+    private authService: AuthService) { }
 
   ngOnInit(): void {
     this.loadInventory();
@@ -59,48 +61,118 @@ export class OrderInventoryComponent implements OnInit {
     });
   }
 
-  addIngredient() {
-    if (this.selectedIngredient) {
-      const existingIngredient = this.itemDataSource.find(item => item.name === this.selectedIngredient!.itemname);
+  async validateOrderFormDetails(iteamname: any, selectedquantity: any): Promise<boolean> {
+    try {
+      const data = await this.OrderService.getItemQuantity(iteamname).toPromise();
+      this.quantity = data.quantityinstock;
+      const selectedQuantityNum = Number(selectedquantity);
 
-      if (existingIngredient) {
-        existingIngredient.quantity += this.ingredientQuantity;
-        existingIngredient.price = existingIngredient.quantity * this.selectedIngredient.priceunit;
-      } else {
-        this.itemDataSource = [...this.itemDataSource, { name: this.selectedIngredient.itemname, quantity: this.ingredientQuantity, price: this.selectedIngredient.priceunit * this.ingredientQuantity }];
+      if (this.quantity < selectedQuantityNum) {
+        alert("Can't place the order.");
+        return false;
       }
 
-      this.resetIngredientForm();
+      return true; // Return true if the quantity is sufficient
+    } catch (error) {
+      console.error('Error fetching item quantity:', error);
+      return false; // Handle errors by returning false
     }
   }
 
-  addTool() {
+  async addIngredient() {
+    if (this.selectedIngredient) {
+
+      const existingIngredient = this.itemDataSource.find(item => item.name === this.selectedIngredient!.itemname);
+
+      if (existingIngredient) {
+
+        existingIngredient.quantity += this.ingredientQuantity;
+
+        //call validateOrderFormDetails method
+        if (await this.validateOrderFormDetails(this.selectedIngredient.itemname, existingIngredient.quantity)) {
+
+          existingIngredient.price = existingIngredient.quantity * this.selectedIngredient.priceunit;
+
+        } else {
+          existingIngredient.quantity -= this.ingredientQuantity;
+        }
+
+      } else {
+        //call validateOrderFormDetails method
+        if (await this.validateOrderFormDetails(this.selectedIngredient.itemname, this.ingredientQuantity)) {
+
+          this.itemDataSource = [...this.itemDataSource, { name: this.selectedIngredient.itemname, quantity: this.ingredientQuantity, price: this.selectedIngredient.priceunit * this.ingredientQuantity }];
+        }
+
+      }
+
+      this.resetIngredientForm();
+    } else {
+      alert("Ingredint not selected")
+    }
+  }
+
+  async addTool() {
     if (this.selectedTool) {
       const existingTool = this.itemDataSource.find(item => item.name === this.selectedTool!.itemname);
 
       if (existingTool) {
         existingTool.quantity += this.toolQuantity;
-        existingTool.price = existingTool.quantity * this.selectedTool.priceunit;
+        
+        //call validateOrderFormDetails method
+        if (await this.validateOrderFormDetails(this.selectedTool.itemname, existingTool.quantity)) {
+
+          existingTool.price = existingTool.quantity * this.selectedTool.priceunit;
+
+        } else {
+          existingTool.quantity -= this.toolQuantity;
+        }
+       
       } else {
-        this.itemDataSource = [...this.itemDataSource, { name: this.selectedTool.itemname, quantity: this.toolQuantity, price: this.selectedTool.priceunit * this.toolQuantity }];
+
+        //call validateOrderFormDetails method
+        if (await this.validateOrderFormDetails(this.selectedTool.itemname, this.ingredientQuantity)) {
+
+          this.itemDataSource = [...this.itemDataSource, { name: this.selectedTool.itemname, quantity: this.toolQuantity, price: this.selectedTool.priceunit * this.toolQuantity }];
+        }
       }
 
       this.resetToolForm();
+
+    } else {
+      alert("Tool not selected")
     }
   }
 
-  addPartyItem() {
+  async addPartyItem() {
     if (this.selectedPartyItem) {
       const existingPartyItem = this.itemDataSource.find(item => item.name === this.selectedPartyItem!.itemname);
 
       if (existingPartyItem) {
         existingPartyItem.quantity += this.partyItemQuantity;
+        
+        //call validateOrderFormDetails method
+        if (await this.validateOrderFormDetails(this.selectedPartyItem.itemname, existingPartyItem.quantity)) {
+
+          
         existingPartyItem.price = existingPartyItem.quantity * this.selectedPartyItem.priceunit;
+
+        } else {
+          existingPartyItem.quantity -= this.partyItemQuantity;
+        }
       } else {
-        this.itemDataSource = [...this.itemDataSource, { name: this.selectedPartyItem.itemname, quantity: this.partyItemQuantity, price: this.selectedPartyItem.priceunit * this.partyItemQuantity }];
+
+        //call validateOrderFormDetails method
+        if (await this.validateOrderFormDetails(this.selectedPartyItem.itemname, this.ingredientQuantity)) {
+
+          this.itemDataSource = [...this.itemDataSource, { name: this.selectedPartyItem.itemname, quantity: this.partyItemQuantity, price: this.selectedPartyItem.priceunit * this.partyItemQuantity }];
+        }
+        
       }
 
       this.resetPartyItemForm();
+    } else {
+      alert("Party Item not selected")
     }
   }
 
@@ -148,5 +220,5 @@ export class OrderInventoryComponent implements OnInit {
 
 interface InventoryItem {
   itemname: string;
-  priceunit: number;
+  priceunit: number;
 }

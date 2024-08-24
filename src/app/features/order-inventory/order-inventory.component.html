@@ -3,8 +3,8 @@
 <div class="inventory-container">
   <div class="form-container">
     <!-- Cake Ingredients Section -->
-    
-    <div class = 'Ingredients-section' >
+
+    <div class='Ingredients-section'>
       <label for="ingredients-select">Cake Ingredients</label>
       <select id="ingredients-select" [(ngModel)]="selectedIngredient">
         <option *ngFor="let ingredient of cakeIngredients" [ngValue]="ingredient">
@@ -13,14 +13,15 @@
       </select>
 
       <label for="ingredient-quantity">Quantity</label>
-      <input id="ingredient-quantity" type="number" [(ngModel)]="ingredientQuantity" min="0">
+      <input id="ingredient-quantity" type="number" [(ngModel)]="ingredientQuantity" min="0"
+        #ingredientQuantityModel="ngModel">
 
-      <button (click)="addIngredient()">Add Ingredient</button>
+      <button (click)="addIngredient()" [disabled]="ingredientQuantity < 0">Add Ingredient</button>
     </div>
 
     <!-- Cake Tools Section -->
-    
-    <div class = 'tools-section'>
+
+    <div class='tools-section'>
       <label for="tools-select">Cake Tools</label>
       <select id="tools-select" [(ngModel)]="selectedTool">
         <option *ngFor="let tool of cakeTools" [ngValue]="tool">
@@ -29,14 +30,14 @@
       </select>
 
       <label for="tool-quantity">Quantity</label>
-      <input id="tool-quantity" type="number" [(ngModel)]="toolQuantity" min="0">
+      <input id="tool-quantity" type="number" [(ngModel)]="toolQuantity" min="0" #toolQuantityModel="ngModel">
 
-      <button (click)="addTool()">Add Tool</button>
+      <button (click)="addTool()" [disabled]="toolQuantity < 0">Add Tool</button>
     </div>
 
     <!-- Party Items Section -->
- 
-    <div class = 'Items-section'>
+
+    <div class='Items-section'>
       <label for="party-items-select">Party Items</label>
       <select id="party-items-select" [(ngModel)]="selectedPartyItem">
         <option *ngFor="let item of partyItems" [ngValue]="item">
@@ -45,9 +46,10 @@
       </select>
 
       <label for="party-item-quantity">Quantity</label>
-      <input id="party-item-quantity" type="number" [(ngModel)]="partyItemQuantity" min="0">
+      <input id="party-item-quantity" type="number" [(ngModel)]="partyItemQuantity" min="0"
+        #toolQuantityModel="ngModel">
 
-      <button (click)="addPartyItem()">Add Party Item</button>
+      <button (click)="addPartyItem()" [disabled]="partyItemQuantity < 0">Add Party Item</button>
     </div>
 
     <!-- Place Order Button -->
@@ -79,10 +81,11 @@
       </tbody>
     </table>
 
-    
-  </div>
+
+      
+  </div>
 </div>
 
-<div class = 'Price'>
-<label>Total Price : {{ calculateTotalPrice() | currency }}</label>
+<div class='Price'>
+  <label>Total Price : {{ calculateTotalPrice() | currency }}</label>
 </div>
