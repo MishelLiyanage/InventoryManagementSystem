@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 interface InventoryItem {
@@ -32,6 +32,11 @@ export class OrderService {
 
   getPartyItems(): Observable<InventoryItem[]> {
     return this.http.get<InventoryItem[]>(`${this.apiUrl}/getinventorybycategory.php?category=party items`);
+  }
+
+  getItemQuantity(itemname: string): Observable<any> {
+    const params = new HttpParams().set('itemname', itemname);
+    return this.http.get<any>(`${this.apiUrl}/getitemquantity.php`, { params });
   }
 
 
