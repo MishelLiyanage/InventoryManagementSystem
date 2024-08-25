@@ -68,7 +68,7 @@ export class OrderInventoryComponent implements OnInit {
       const selectedQuantityNum = Number(selectedquantity);
 
       if (this.quantity < selectedQuantityNum) {
-        alert("Can't place the order.");
+        alert("Can't place the order.Out of stock.");
         return false;
       }
 
@@ -196,6 +196,11 @@ export class OrderInventoryComponent implements OnInit {
   }
 
   placeOrder() {
+
+    if (this.itemDataSource.length === 0) {
+      alert('No items in your order. Please add items before placing the order.');
+      return;
+    }
     const orderData = {
       userid: this.userid,
       items: this.itemDataSource,

@@ -28,9 +28,20 @@ export class UpdateFormComponent {
 
   onSubmit(form: NgForm) {
     if (form.valid) {
-      this.inventoryService.updateProduct(this.product).subscribe(() => {
-        this.router.navigate(['/feature/update-inventory']);
-      });
+      // Display the confirmation dialog
+      const confirmed = confirm('Are you sure you want to update this item?');
+
+      if(confirmed){
+        // Proceed with the update if the user confirms
+        this.inventoryService.updateProduct(this.product).subscribe(() => {
+          this.router.navigate(['/feature/update-inventory']);
+        });
+
+      }else{
+        // Handle the case when the user cancels the update
+        alert("Update cancelled")
+      }
+      
     } else {
       // Handle the case where the form is invalid
       console.log('Form is invalid');
