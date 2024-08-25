@@ -141,3 +141,8 @@ button:hover {
     font-size: 20px;
     border: #5b1c0c;
 }
+
+button:disabled{
+    background-color:  hsl(12, 77%, 40%);
+    
+}
