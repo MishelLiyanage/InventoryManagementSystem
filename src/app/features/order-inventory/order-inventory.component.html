@@ -1,4 +1,6 @@
-<h1>PLACE YOUR ORDER HERE</h1>
+<div class="headding">
+  <h1><b>PLACE YOUR ORDER HERE</b></h1>
+</div>
 
 <div class="inventory-container">
   <div class="form-container">
@@ -16,7 +18,7 @@
       <input id="ingredient-quantity" type="number" [(ngModel)]="ingredientQuantity" min="0"
         #ingredientQuantityModel="ngModel">
 
-      <button (click)="addIngredient()" [disabled]="ingredientQuantity < 0">Add Ingredient</button>
+      <button (click)="addIngredient()" [disabled]="ingredientQuantity <= 0">Add Ingredient</button>
     </div>
 
     <!-- Cake Tools Section -->
@@ -32,7 +34,7 @@
       <label for="tool-quantity">Quantity</label>
       <input id="tool-quantity" type="number" [(ngModel)]="toolQuantity" min="0" #toolQuantityModel="ngModel">
 
-      <button (click)="addTool()" [disabled]="toolQuantity < 0">Add Tool</button>
+      <button (click)="addTool()" [disabled]="toolQuantity <= 0">Add Tool</button>
     </div>
 
     <!-- Party Items Section -->
@@ -49,7 +51,7 @@
       <input id="party-item-quantity" type="number" [(ngModel)]="partyItemQuantity" min="0"
         #toolQuantityModel="ngModel">
 
-      <button (click)="addPartyItem()" [disabled]="partyItemQuantity < 0">Add Party Item</button>
+      <button (click)="addPartyItem()" [disabled]="partyItemQuantity <= 0">Add Party Item</button>
     </div>
 
     <!-- Place Order Button -->

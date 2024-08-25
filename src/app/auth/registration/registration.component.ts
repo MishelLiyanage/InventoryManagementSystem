@@ -134,7 +134,7 @@ export class RegistrationComponent {
     const isValid = await this.validateForm(); // Wait for the validation to complete
 
     if (isValid) {
-      this.http.post('http://localhost/ims-backend/register.php', this.userModel, {
+      this.http.post('https://api.viosu.online/register.php', this.userModel, {
           headers: { 'Content-Type': 'application/json' }
         })
         .subscribe(

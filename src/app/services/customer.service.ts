@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class CustomerService {
 
-  private apiUrl = 'http://localhost/ims-backend/getCustomers.php'; // Update with your actual API URL
+  private apiUrl = 'https://api.viosu.online/getCustomers.php'; // Update with your actual API URL
 
   constructor(private http: HttpClient) { }
 
@@ -16,6 +16,6 @@ export class CustomerService {
   }
 
   getCustomerCount(): Observable<{ customerCount: number }> {
-    return this.http.get<{ customerCount: number }>(`http://localhost/ims-backend/getCustomerCount.php`);
+    return this.http.get<{ customerCount: number }>(`https://api.viosu.online/getCustomerCount.php`);
   }
 }
