@@ -102,6 +102,7 @@ export class AddInventoryComponent implements OnInit {
         this.inventoryService.addItem(formData).subscribe(
           response => {
             console.log('Item added successfully', response);
+            alert("Item added successfully");
             form.reset(); // Reset the form after successful submission
           },
           error => {
