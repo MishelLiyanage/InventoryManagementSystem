@@ -6,7 +6,7 @@
     text-align: left;
     border: 1px solid white;
     box-shadow: 0 5px 3px -3px #12121230;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 h1 {
@@ -23,7 +23,7 @@ h1 {
     padding: 40px;
     border-radius: 15px;
     width: 500px;
-    margin: auto;
+    /* margin: auto; */
     font-size: 13px;
     box-shadow: 50px;
     font-weight: bold;

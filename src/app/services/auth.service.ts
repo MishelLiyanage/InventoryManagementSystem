@@ -10,8 +10,8 @@ export class AuthService {
   private userId: number | null = null;
   private firstname: string | null = null;
 
-  private apiLoginUrl = 'http://localhost/ims-backend/login.php'; 
-  private apiCheckUsernameUrl = 'http://localhost/ims-backend/check-username.php';
+  private apiLoginUrl = 'https://api.viosu.online/login.php'; 
+  private apiCheckUsernameUrl = 'https://api.viosu.online/check-username.php';
 
   constructor(private http: HttpClient, @Inject(PLATFORM_ID) private platformId: any) {}
 

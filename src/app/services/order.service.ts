@@ -18,20 +18,20 @@ export interface Order {
 })
 export class OrderService {
 
-  private apiUrl = 'http://localhost/ims-backend'; // Backend API URL
+  private apiUrl = 'https://api.viosu.online'; // Backend API URL
 
   constructor(private http: HttpClient) {}
 
   getCakeIngredients(): Observable<InventoryItem[]> {
-    return this.http.get<InventoryItem[]>(`${this.apiUrl}/getinventorybycategory.php?category=Cake Ingredients`);
+    return this.http.get<InventoryItem[]>(`${this.apiUrl}/getinventorybycategory.php?category=Cake%20Ingredients`);
   }
 
   getCakeTools(): Observable<InventoryItem[]> {
-    return this.http.get<InventoryItem[]>(`${this.apiUrl}/getinventorybycategory.php?category=Cake Tools`);
+    return this.http.get<InventoryItem[]>(`${this.apiUrl}/getinventorybycategory.php?category=Cake%20Tools`);
   }
 
   getPartyItems(): Observable<InventoryItem[]> {
-    return this.http.get<InventoryItem[]>(`${this.apiUrl}/getinventorybycategory.php?category=party items`);
+    return this.http.get<InventoryItem[]>(`${this.apiUrl}/getinventorybycategory.php?category=party%20items`);
   }
 
   getItemQuantity(itemname: string): Observable<any> {
