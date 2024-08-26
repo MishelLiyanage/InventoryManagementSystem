@@ -24,7 +24,7 @@ export class RegistrationComponent {
   ) {}
 
   ngOnInit(): void {
-    this.configService.setConfig(new LayoutConfig(false, false, false));
+    this.configService.setConfig(new LayoutConfig(false, false, false, false));
   }
 
   validateForm(): Promise<boolean> {

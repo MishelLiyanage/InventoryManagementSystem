@@ -11,6 +11,6 @@ export class LayoutConfig implements ILayoutConfig {
         public customerSideNav?: boolean,
         public footer?: boolean
     ) {
-
+            
     }
 }
