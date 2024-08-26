@@ -1,27 +1,78 @@
-# Ims
+# Inventory Management System for Cake Shop
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Introduction
+The Inventory Management System is a web-based application developed for a cake shop. The system allows administrators to manage inventory items across three categories: Cake Ingredients, Cake Tools, and Party Items. Users can view and search the inventory, place orders, and manage their accounts.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Admin Privileges
+- Add Inventory: Admins can add new items to the inventory under any of the three categories.
+- Delete Inventory Item: Admins can delete existing items from the inventory.
+- View Inventory: Admins can view a complete list of all inventory items.
+- Update Inventory: Admins can update details of existing inventory items.
+- View Orders: Admins can view all orders placed by users.
+- Download Reports: Admins can download inventory and order reports.
 
-## Code scaffolding
+### User Privileges
+- Sign Up: New users can create an account.
+- View Inventory: Users can view the inventory items across all categories.
+- Search Inventory: Users can search for specific items in the inventory.
+- Order Items: Users can place orders for items from the inventory.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation
 
-## Build
+### Backend (PHP & MySQL)
+1. Clone the repository:
+    git clone https://github.com/MishelLiyanage/InventoryManagementSystem.git
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. Backend is hosted.   
 
-## Running unit tests
+### Frontend (Angular)
+1. Install dependencies:
+    npm install
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Start the Angular development server:
+    `ng serve` and Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+    - You can also run `npm start`. Both commands are configured
 
-## Running end-to-end tests
+4. Click on the link to view the web page (Ctrl+Click on the link)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+5. You also can view the hosted website from https://kln-ims.web.app/
 
-## Further help
+## API Endpoints
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Authentication
+- POST /api/auth/login - Authenticate a user.
+- POST /api/auth/signup - Register a new user.
+
+### Inventory
+- GET /api/inventory - Get all inventory items.
+- POST /api/inventory - Add a new inventory item (Admin only).
+- PUT /api/inventory/{id} - Update an inventory item (Admin only).
+- DELETE /api/inventory/{id} - Delete an inventory item (Admin only).
+
+### Orders
+- GET /api/orders - Get all orders (Admin only).
+- POST /api/orders - Place a new order (User only).
+
+## Technologies Used
+- Frontend: Angular
+- Backend: PHP
+- Database: MySQL
+- Styling: CSS
+
+## License
+This project is licensed under the MIT License.
+
