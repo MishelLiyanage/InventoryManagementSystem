@@ -1,8 +1,14 @@
 <div>
-  <div class="registration-container"></div>
+  
+
+  <div class="registration-container">
+    <mat-progress-bar mode="indeterminate" *ngIf="isLoggingIn"></mat-progress-bar>
+  </div>
+
   <div class="form-container" appearance="outlined">
+    
     <div class="left-container">
-      <img src="../../../assets/loginbackground2.png" alt="">
+      <img  src="../../../assets/b2.jpg" alt="">
     </div>
     <div class="content">
       <div class="topic-signup">

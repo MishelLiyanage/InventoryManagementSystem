@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 const routes: Routes = [
   {
@@ -29,7 +30,8 @@ const routes: Routes = [
   imports: [
     RouterModule.forChild(routes),
     CommonModule,
-    FormsModule
+    FormsModule,
+    MatProgressBarModule
   ]
 })
 export class AuthModule { }

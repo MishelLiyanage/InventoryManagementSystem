@@ -40,10 +40,8 @@
             ],
             "scripts": [],
             "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "prerender": false,
+            "ssr": false
           },
           "configurations": {
             "production": {
@@ -55,7 +53,7 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2.2kb",
+                  "maximumWarning": "2.7kb",
                   "maximumError": "4kb"
                 }
               ],
