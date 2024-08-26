@@ -37,7 +37,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 1. Clone the repository:
     git clone https://github.com/MishelLiyanage/InventoryManagementSystem.git
 
-2. Backend is hosted.   
+2. Backend is hosted.  
+    git clone https://github.com/MishelLiyanage/InventoryManagementSystem-backend.git
 
 ### Frontend (Angular)
 1. Install dependencies:
