@@ -73,6 +73,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Database: MySQL
 - Styling: CSS
 
-## License
-This project is licensed under the MIT License.
+## Organization
+Developed under the supervision of Department of Industrial Management
+
 
