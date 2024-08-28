@@ -1,25 +1,34 @@
 <div>
   
-
+<!-- Container for the registration process -->
   <div class="registration-container">
+    <!-- Container for the registration process -->
     <mat-progress-bar mode="indeterminate" *ngIf="isLoggingIn"></mat-progress-bar>
   </div>
 
+  <!-- Main container for the form -->
   <div class="form-container" appearance="outlined">
     
+    <!-- Left section of the container with an image -->
     <div class="left-container">
       <img  src="../../../assets/b2.jpg" alt="">
     </div>
+
+    <!-- Right section with the form content -->
     <div class="content">
+      <!-- welcoming the user -->
       <div class="topic-signup">
         <h1>Welcome</h1>
         <h3>Log in to your account</h3>
       </div>
 
-      <!-- {{ userForm.value | json }} -->
+      <!-- Horizontal line separator -->
       <hr />
-      <!-- {{ userModel | json }} -->
+
+      <!-- Form for user login, triggered on submit -->
       <form (ngSubmit)="login()">
+
+        <!-- Username input field -->
         <div class="form-group">
           <label for="">Username: </label>
           <input
@@ -29,9 +38,12 @@
             [(ngModel)]="username"
             name="username"
           />
+
+          <!-- Display error message if username validation fails -->
           <div *ngIf="usernameError" class="error">{{ usernameError }}</div>
         </div>
 
+        <!-- Password input field -->
         <div class="form-group">
           <label for="">Password: </label>
           <input
@@ -41,13 +53,18 @@
             [(ngModel)]="password"
             name="password"
           />
+
+          <!-- Display error message if password validation fails -->
           <div *ngIf="passwordError" class="error">{{ passwordError }}</div>
         </div>
 
+        <!-- Display a general login error if login fails -->
         <div *ngIf="loginError" class="error">{{ loginError }}</div>
 
+        <!-- Submit button for login, disabled if locked -->
         <button class="btn" type="submit" [disabled]="isLocked">Log In</button>
 
+        <!-- navigating to the sign-up page -->
         <div class="signup">
           <label>Don't have an account? </label>
           <button class="btn-signup" (click)="navigateToSignUp()">
