@@ -1,10 +1,19 @@
 <div>
+  <!-- Container for the overall registration page -->
   <div class="registration-container"></div>
+  
+  <!-- Container for the form with an outlined appearance -->
   <div class="form-container" appearance="outlined">
+    
+    <!-- Left container for displaying an image -->
     <div class="left-container">
       <img src="../../../assets/b2.jpg" alt="" />
     </div>
+
+    <!-- Content section containing the signup form -->
     <div class="content">
+      
+      <!-- Section for the sign-up topic and introduction -->
       <div class="topic-signup">
         <h1>Sign Up</h1>
         <h3>Create your account</h3>
@@ -12,8 +21,12 @@
 
       <hr />
 
+      <!-- Signup form with validation and two-way binding -->
       <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+        
+        <!-- Section for user's name input fields -->
         <div class="name">
+          <!-- Input field for first name -->
           <div class="form-group">
             <label for="firstname">First name: </label>
             <input
@@ -29,6 +42,7 @@
             </div>
           </div>
   
+          <!-- Input fiekd for last name -->
           <div class="form-group">
             <label for="lastname">Last name: </label>
             <input
@@ -46,6 +60,7 @@
   
         </div>
         
+        <!-- Input for email -->
         <div class="form-group">
           <label for="email">E-mail: </label>
           <input
@@ -61,6 +76,7 @@
           </div>
         </div>
 
+        <!-- Input for username -->
         <div class="form-group">
           <label for="">Username: </label>
           <input
@@ -76,6 +92,7 @@
           </div>
         </div>
 
+         <!-- Input for password -->
         <div class="form-group">
           <label for="">Password: </label>
           <input
@@ -91,6 +108,7 @@
           </div>
         </div>
 
+        <!-- Input for city -->
         <div class="form-group">
           <label for="">City: </label>
           <input
@@ -106,6 +124,7 @@
           </div>
         </div>
 
+        <!-- Input for contact number -->
         <div class="form-group">
           <label for="">Contact No: </label>
           <input
@@ -121,8 +140,10 @@
           </div>
         </div>
 
+        <!-- Submit button for the signup form -->
         <button class="btn" type="submit">Sign Up</button>
 
+        <!-- Link to the login page if the user already has an account -->
         <div class="signup">
           <label>Already have an account? </label>
           <button class="btn-signup" (click)="navigateToLogin()">Log In</button>
