@@ -1,5 +1,7 @@
 <div class="sidebar">
+  <!-- Main container for the sidebar -->
   <div class="section">
+    <!-- Section for general navigation -->
     <h3>GENERAL</h3>
     <ul>
       <div (click)="navigateToDashboard()">
@@ -9,27 +11,33 @@
   </div>
 
   <div class="section">
+    <!-- Section for Inventory-related links -->
     <h3 style="font-weight: bold">Inventory</h3>
     <ul>
       <div class="pagelinks" (click)="navigateToAddInventory()">
+        <!-- Link to navigate to the Add Inventory page -->
         <li>Add Inventory</li>
       </div>
 
       <div (click)="navigateToUpdateInventory()">
+        <!-- Link to navigate to the Delete/Update Inventory page -->
         <li>Delete/Update Inventory</li>
       </div>
       
       <div (click)="navigateToViewInventory()">
+        <!-- Link to navigate to the View Inventory page -->
         <li>View Inventory</li>
       </div>
       
       <div (click)="navigateToSearchInventory()">
+        <!-- Link to navigate to the Search Inventory page -->
         <li>Search Inventory</li>
       </div>
     </ul>
   </div>
 
   <div class="section">
+    <!-- Section for Sales Orders-related links -->
     <h3 style="font-weight: bold">Sales Orders</h3>
     <ul>
       <div (click)="navigateToViewOrders()">
@@ -39,6 +47,7 @@
   </div>
 
   <div class="section">
+    <!-- Section for Reports-related links -->
     <h3 style="font-weight: bold">Reports</h3>
     <ul>
       <div (click)="navigateToReports()">
@@ -48,9 +57,11 @@
   </div>
 
   <div class="section">
+    <!-- Section for Support-related links -->
     <h3 style="font-weight: bold">SUPPORT</h3>
     <ul>
       <div>
+        <!-- Link to navigate to the Settings page -->
         <li>Settings</li>
       </div>
     </ul>
