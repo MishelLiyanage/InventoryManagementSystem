@@ -1,29 +1,36 @@
 <div class="sidebar">
+  <!-- Section for general navigation options -->
     <div class="section">
       <h3>GENERAL</h3>
       <ul>
+        <!-- Navigation option for the Dashboard -->
         <div (click)="navigateToDashboard()">
           <li>Dashboard</li>
         </div>
       </ul>
     </div>
   
+    <!-- Section for inventory management options -->
     <div class="section">
       <h3 style="font-weight: bold">Inventory</h3>
       <ul>
+        <!-- Navigation option to view inventory -->
         <div (click)="navigateToViewInventory()">
           <li>View Inventory</li>
         </div>
         
+        <!-- Navigation option to search inventory -->
         <div (click)="navigateToSearchInventory()">
           <li>Search Inventory</li>
         </div>
       </ul>
     </div>
   
+    <!-- Section for sales order management -->
     <div class="section">
       <h3 style="font-weight: bold">Sales Orders</h3>
       <ul>
+        <!-- Navigation option to place an order -->
         <div (click)="navigateToOrderInventory()">
           <li>Place an Order</li>
         </div>
@@ -31,9 +38,11 @@
       </ul>
     </div>
   
+    <!-- Section for support options -->
     <div class="section">
       <h3 style="font-weight: bold">SUPPORT</h3>
       <ul>
+        <!-- Settings option under support -->
         <div>
           <li>Settings</li>
         </div>

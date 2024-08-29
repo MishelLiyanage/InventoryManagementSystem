@@ -1,15 +1,20 @@
 <header class="header-container">
+  <!-- Logo section with the bakery logo and brand name -->
   <div class="logo">
-    <!-- <img src="https://cdn-icons-png.flaticon.com/128/7242/7242141.png" /> -->
+    <!-- Bakery logo image -->
      <img src="../../../assets/bakery-logo-concept.png" alt="logo">
     <span>Cake Fantasy</span>
   </div>
 
+  <!-- Right section of the header which includes the user profile and logout button -->
   <div class="header-right">
+
+    <!-- Displaying user's first name -->
     <div class="user-profile">
       <span>Hi, {{firstname}}</span>
     </div>
     
+    <!-- Logout button for user to end the ongoing session -->
     <div class="logoutbtn" (click)="logout()">
       <span>Log Out</span>
     </div>
